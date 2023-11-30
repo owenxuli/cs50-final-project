@@ -89,31 +89,57 @@ def logout():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+
     # Get the inputs from the register page
+
     username = request.form.get("username")
+
     password = request.form.get("password")
+    
     confirmation = request.form.get("confirmation")
+    
     if request.method == "GET":
+    
         return render_template("register.html")
+    
     elif not username:
+    
         # When there is no inputted username
+    
         return apology("No Input Username")
+    
     elif not password or not confirmation:
+    
         # When there is no inputted password or confirmation
+    
         return apology("Password or Confirmation Left Blank")
+    
     elif password != confirmation:
+    
         # When the inputted password doesn't match the confirmation password
+    
         return apology("Passwords Didn't Match")
+    
     # Using the generate_password_hash to encrypt the password into something harder to hack
+    
     npassword = generate_password_hash(password)
+    
     try:
+    
         # Inserting the username and the encrypted password into the users table
+    
         db.execute(
+    
             "INSERT INTO users (username, hash) VALUES (?, ?)", username, npassword
+    
         )
+    
     except:
+    
         # Unless the username already exists
+    
         return apology("Username Already Exists")
 
     # Redirect to the homepage when finished
+   
     return redirect("/")
