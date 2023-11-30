@@ -1,0 +1,5 @@
+Project idea:
+
+Website where you can practice common chess openings with explanations for each move.
+
+If possible: add puzzles so users can practice chess concepts.
