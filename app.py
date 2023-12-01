@@ -8,7 +8,7 @@ import datetime
 import chess
 import chess.svg
 
-from helpers import apology, login_required
+from helpers import apology, login_required, generate_board
 
 # Configure application
 app = Flask(__name__)
@@ -42,11 +42,8 @@ def index():
 @app.route("/notation")
 @login_required
 def notation():
-    board = chess.Board()
-
-
-    return render_template("notation.html")
-
+    squares = generate_board()
+    return render_template('notation.html', squares=squares)
 
 #TO-DO
 @app.route("/openings")

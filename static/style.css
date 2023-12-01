@@ -21,3 +21,29 @@ nav .navbar-brand .green
 {
     color: #2e944b;
 }
+
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    justify-content: center;
+    align-items: center;
+}
+
+.chessboard div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.white {
+    background-color: #eee;
+}
+
+.black {
+    background-color: #222;
+    color: #fff;
+}

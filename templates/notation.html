@@ -8,5 +8,13 @@
     <h1>Notation</h1>
     <body>
         By Owen and Daniel John
+        <div class="chessboard">
+            {% for square in squares %}
+                <div class="{{ square.color }}">
+                    {{ square.piece }}{{ square.name }}
+                </div>
+            {% endfor %}
+        </div>
+        <p>In chess, every square has a name. Starting from the left side of the board, in white's perspective, we denote every column starting from a to h, and starting from the bottom we number every row from 1 to 8. We denote the white pieces with capital leter, such as P por pawn, and black pieces with lower letters, such as p for pawn.</p>
     </body>
 {% endblock %}

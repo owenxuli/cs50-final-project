@@ -9,6 +9,20 @@ import uuid
 from flask import redirect, render_template, session
 from functools import wraps
 
+# this function will generate a chess board
+def generate_board():
+    board = chess.Board()
+    squares = []
+
+    for row in range(7, -1, -1):
+        for col in range(8):
+            square_name = chess.square_name(chess.square(col, row))
+            piece = board.piece_at(chess.square(col, row))
+            piece_symbol = piece.symbol() if piece else ""
+            color = "white" if (row + col) % 2 == 0 else "black"
+            squares.append({"name": square_name, "piece": piece_symbol, "color": color})
+
+    return squares
 
 def apology(message, code=400):
     """Render message as an apology to user."""
