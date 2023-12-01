@@ -42,7 +42,9 @@ def index():
 @app.route("/notation")
 @login_required
 def notation():
+    # this function is defined in helpers.py
     squares = generate_board()
+    
     return render_template('notation.html', squares=squares)
 
 #TO-DO
@@ -114,11 +116,8 @@ def register():
     """Register user"""
 
     # Get the inputs from the register page
-
     username = request.form.get("username")
-
     password = request.form.get("password")
-    
     confirmation = request.form.get("confirmation")
     
     if request.method == "GET":
