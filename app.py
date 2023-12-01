@@ -47,7 +47,7 @@ def openings():
 
 @app.route("/rules")
 @login_required
-def puzzles():
+def rules():
     return render_template("rules.html")
 
 @app.route("/login", methods=["GET", "POST"])
