@@ -35,6 +35,20 @@ def after_request(response):
 def index():
     return render_template("index.html")
 
+@app.route("/notation")
+@login_required
+def notation():
+    return render_template("notation.html")
+
+@app.route("/openings")
+@login_required
+def openings():
+    return render_template("openings.html")
+
+@app.route("/puzzles")
+@login_required
+def puzzles():
+    return render_template("puzzles.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
