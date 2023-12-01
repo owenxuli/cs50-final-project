@@ -12,7 +12,7 @@ from helpers import apology, login_required
 app = Flask(__name__)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///openings.db")
+db = SQL("sqlite:///users.db")
 
 
 @app.after_request
