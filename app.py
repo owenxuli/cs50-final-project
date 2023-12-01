@@ -45,10 +45,10 @@ def notation():
 def openings():
     return render_template("openings.html")
 
-@app.route("/puzzles")
+@app.route("/rules")
 @login_required
 def puzzles():
-    return render_template("puzzles.html")
+    return render_template("rules.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
