@@ -35,20 +35,27 @@ def after_request(response):
 def index():
     return render_template("index.html")
 
+
+#TO-DO
 @app.route("/notation")
 @login_required
 def notation():
     return render_template("notation.html")
 
+
+#TO-DO
 @app.route("/openings")
 @login_required
 def openings():
     return render_template("openings.html")
 
+
+#TO-DO
 @app.route("/rules")
 @login_required
 def rules():
     return render_template("rules.html")
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -89,7 +96,6 @@ def login():
         return render_template("login.html")
 
 
-
 @app.route("/logout")
 def logout():
     """Log user out"""
@@ -99,8 +105,6 @@ def logout():
 
     # Redirect user to login form
     return redirect("/")
-
-
 
 
 @app.route("/register", methods=["GET", "POST"])
