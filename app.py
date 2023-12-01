@@ -6,6 +6,7 @@ from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 import datetime
 import chess
+import chess.svg
 
 from helpers import apology, login_required
 
@@ -41,6 +42,9 @@ def index():
 @app.route("/notation")
 @login_required
 def notation():
+    board = chess.Board()
+
+
     return render_template("notation.html")
 
 
