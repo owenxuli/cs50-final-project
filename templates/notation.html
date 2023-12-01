@@ -9,17 +9,40 @@
     <body>
         By Owen and Daniel John
         <p>In chess, every square has a name. Starting from the left side of the board, in white's perspective, we denote every column starting from a to h, and starting from the bottom we number every row from 1 to 8. We denote the white pieces with capital leter, such as P por pawn, and black pieces with lower letters, such as p for pawn.</p>
-        <p>
-            In general, chess follows the following notation:
+        <p>In general, chess follows the following notation:</p>
+        <div class="center-container">
             <ul>
-                <li>P: White Pawn</li>
-                <li>R: White Rook</li>
-                <li>N: White Knight</li>
-                <li>B: White Bishop</li>
-                <li>Q: White Queen</li>
-                <li>K: White King</li>
-            </ul>
-        </p>
+                <table>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Piece</th>
+                    </tr>
+                    <tr>
+                        <td>P</td>
+                        <td>White Pawn</td>
+                    </tr>
+                    <tr>
+                        <td>R</td>
+                        <td>White Rook</td>
+                    </tr>
+                    <tr>
+                        <td>N</td>
+                        <td>White Knight</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>White Bishop</td>
+                    </tr>
+                    <tr>
+                        <td>Q</td>
+                        <td>White Queen</td>
+                    </tr>
+                    <tr>
+                        <td>K</td>
+                        <td>White King</td>
+                    </tr>
+                </table>
+            </div>
         <div class="chessboard">
             {% for square in squares %}
                 <div class="{{ square.color }}">
