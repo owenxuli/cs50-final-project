@@ -10,6 +10,8 @@
         By Owen Xu and Daniel Zhang
     </body>
 
+    <div style="margin-top: 20px;"></div>
+    
     <table class="table table-bordered table-hover">
         <thead class="thead-dark">
             <tr>
@@ -18,30 +20,19 @@
                 <th scope="col">Number of Main Variations</th>
             </tr>
         </thead>
-    </table>
 
-    <style>
-        .not-bold
-        {
-            font-weight: normal;
-        }
-        .background 
-        {
-            background-image: url('Background.jpeg');
-        }
-    </style>
-
-    <div style="margin-top: 20px;"></div>
-
-    <tbody>
         {% for n in name %}
             <tr>
-                <td class="not-bold" href="https://physics.yale.edu/people/david-poland">{{ n["name"] }}</th>
+                <td><a class="not-bold" href="https://physics.yale.edu/people/david-poland">{{ n["name"] }}</a></th>
                 <td class="not-bold">{{ n["color"] }}</th>
                 <td class="not-bold">{{ n["variations"] }}</th>
             </tr>
         {% endfor %}
-    </tbody>
+    </table>
+
+    <div style="margin-top: 20px;"></div>
+
+    
 
 
 
