@@ -6,6 +6,6 @@
 
 {% block main %}
 <!-- https://memegen.link/ -->
-    <img alt="{{ top }}" class="border img-fluid" src="/static/magnuscarlsen.webp" title="{{ top }}">
+    <img alt="{{ top }}" class="border img-fluid" src="{{ url_for('static', filename='/static/magnuscarlsen.webp') }}"" title="{{ top }}">
 {% endblock %}
 
