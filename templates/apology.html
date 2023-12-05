@@ -6,5 +6,6 @@
 
 {% block main %}
 <!-- https://memegen.link/ -->
-    <img alt="{{ top }}" class="border img-fluid" src="/static/hq720.jpg" title="{{ top }}">
+    <img alt="{{ top }}" class="border img-fluid" src="{{ url_for('static', filename='/static/hq720.jpg') }}" title="{{ top }}">
 {% endblock %}
+
