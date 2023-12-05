@@ -34,11 +34,11 @@
     <div style="margin-top: 20px;"></div>
 
     <tbody>
-        {% for each in name %}
+        {% for n in name %}
             <tr>
-                <th class="not-bold">{{ each["name"] }}</th>
-                <th class="not-bold">{{ each["color"] }}</th>
-                <th class="not-bold">{{ each["variations"] }}</th>
+                <td class="not-bold" href="https://physics.yale.edu/people/david-poland">{{ n["name"] }}</th>
+                <td class="not-bold">{{ n["color"] }}</th>
+                <td class="not-bold">{{ n["variations"] }}</th>
             </tr>
         {% endfor %}
     </tbody>
