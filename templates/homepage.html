@@ -9,4 +9,35 @@
     <body>
         By Owen Xu and Daniel Zhang
     </body>
+
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Opening Name</th>
+                <th scope="col">Starting Color</th>
+                <th scope="col">Number of Main Variations</th>
+            </tr>
+        </thead>
+    </table>
+
+    <style>
+        .not-bold
+        {
+            font-weight: normal;
+        }
+    </style>
+
+    <tbody>
+        {% for each in name %}
+            <tr>
+                <th class="not-bold">{{ each["name"] }}</th>
+                <th class="not-bold">{{ each["color"] }}</th>
+                <th class="not-bold">{{ each["variations"] }}</th>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+
+
+
 {% endblock %}
