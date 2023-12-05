@@ -35,7 +35,10 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    return render_template("homepage.html")
+    name = db.execute ("SELECT name FROM openings")
+    color = db.execute ("SELECT color FROM openings")
+    variations = db.execute ("SELECT variations FROM openings")
+    return render_template("homepage.html", name = name, color = color, variations = variations)
 
 
 #TO-DO
