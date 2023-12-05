@@ -20,6 +20,7 @@ Session(app)
 
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///users.db")
+db2 = SQL("sqlite:///openings.db")
 
 
 @app.after_request
@@ -34,10 +35,10 @@ def after_request(response):
 
 @app.route("/")
 @login_required
-def index():
-    name = db.execute ("SELECT name FROM openings")
-    color = db.execute ("SELECT color FROM openings")
-    variations = db.execute ("SELECT variations FROM openings")
+def homepage():
+    name = db2.execute ("SELECT name FROM openings")
+    color = db2.execute ("SELECT color FROM openings")
+    variations = db2.execute ("SELECT variations FROM openings")
     return render_template("homepage.html", name = name, color = color, variations = variations)
 
 
