@@ -114,42 +114,63 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+    # clear the session first
+    session.clear()
 
-    # Get the inputs from the register page
-    username = request.form.get("username")
-    password = request.form.get("password")
-    confirmation = request.form.get("confirmation")
-    
-    if request.method == "GET":
-        return render_template("register.html")
-    
-    elif not username:
-        # When there is no inputted username
-        return apology("No Input Username")
-    
-    elif not password or not confirmation:
-        # When there is no inputted password or confirmation
-        return apology("Password or Confirmation Left Blank")
-    
-    elif password != confirmation:
-        # When the inputted password doesn't match the confirmation password
-        return apology("Passwords Didn't Match")
-    
-    # Using the generate_password_hash to encrypt the password into something harder to hack
-    npassword = generate_password_hash(password)
-    try:
-        # Inserting the username and the encrypted password into the users table
-        db.execute(
-            "INSERT INTO users (username, hash) VALUES (?, ?)", username, npassword
+    # check if the request method is POST
+    if request.method == "POST":
+        # check if the user provided a username
+        if not request.form.get("username"):
+            return apology("Please provide a username")
+
+        # check if the user provided a password
+        elif not request.form.get("password"):
+            return apology("Please provide a password")
+
+        # check if the user provided a confirmation of the password
+        elif not request.form.get("confirmation"):
+            return apology(
+                "Please provide a confirmation for the password",
+            )
+
+        # check if the password and confirmation fields have the same input
+        elif request.form.get("confirmation") != request.form.get("password"):
+            return apology(
+                "The passwords do not match",
+            )
+
+        # query the database
+        user = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
         )
-    
-    except:
-        # Unless the username already exists
-        return apology("Username Already Exists")
 
-    # Redirect to the homepage when finished
-    return redirect("/")
+        # check if the username inputted already exists, since the number of rows with the inputted username should be 0
+        if len(user) != 0:
+            return apology(
+                "Username already exists",
+            )
+
+        # if the username does not exist, then insert into users table
+        db.execute(
+            "INSERT INTO users (username, hash) VALUES (?, ?)",
+            request.form.get("username"),
+            generate_password_hash(request.form.get("password")),
+        )
+
+        # query database for newly created user
+        user = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
+
+        # remember the user that is logged in
+        session["user_id"] = user[0]["id"]
+
+        # once registered, go back to homepage
+        return redirect("/")
+
+    # if the request method is GET, then enter register.html
+    else:
+        return render_template("register.html")
