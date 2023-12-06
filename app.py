@@ -22,6 +22,8 @@ Session(app)
 db = SQL("sqlite:///users.db")
 db2 = SQL("sqlite:///openings.db")
 
+# a global variable for the chess board
+board = chess.Board()
 
 @app.after_request
 def after_request(response):
@@ -48,8 +50,21 @@ def homepage():
 def notation():
     # this function is defined in helpers.py
     squares = generate_board()
+
+    return render_template('notation.html', squares=squares, board=board)
+
+@app.route("/move", methods=["POST"])
+def move():
+    move_str = request.form["move"]
+    move = chess.Move.from_uci(move_str)
     
-    return render_template('notation.html', squares=squares)
+    if move in board.legal_moves:
+        board.push(move)
+        result = "Valid move: {}".format(move_str)
+    else:
+        result = "Invalid move: {}".format(move_str)
+
+    return render_template("move.html", result=result)
 
 #TO-DO
 @app.route("/openings")

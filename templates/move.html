@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Move
+{% endblock %}
+
+{% block main %}
+    <h1>Practice Chess Notation</h1>
+    <body>
+
+        <form method="POST" action="/move">
+            <label for="move">Enter move (UCI format):</label>
+            <input type="text" id="move" name="move" required>
+            <button type="submit">Make Move</button>
+        </form>
+
+        <div>
+            {{ board._repr_svg_() | safe }}
+        </div>
+
+    </body>
+{% endblock %}
