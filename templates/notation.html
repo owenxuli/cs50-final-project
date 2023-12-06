@@ -14,35 +14,43 @@
             <ul>
                 <table>
                     <tr>
-                        <th>Symbol</th>
+                        <th>Symbol (White Piece)</th>
+                        <th>Symbol (Black Piece)</th>
                         <th>Piece</th>
                     </tr>
                     <tr>
                         <td>P</td>
+                        <td>p</td>
                         <td>White Pawn</td>
                     </tr>
                     <tr>
                         <td>R</td>
+                        <td>r</td>
                         <td>White Rook</td>
                     </tr>
                     <tr>
                         <td>N</td>
+                        <td>n</td>
                         <td>White Knight</td>
                     </tr>
                     <tr>
                         <td>B</td>
+                        <td>b</td>
                         <td>White Bishop</td>
                     </tr>
                     <tr>
                         <td>Q</td>
+                        <td>q</td>
                         <td>White Queen</td>
                     </tr>
                     <tr>
                         <td>K</td>
+                        <td>k</td>
                         <td>White King</td>
                     </tr>
                 </table>
             </div>
+
         <div class="chessboard">
             {% for square in squares %}
                 <div class="{{ square.color }}">
@@ -51,7 +59,27 @@
             {% endfor %}
         </div>
 
-        <h2><a href="move.html">Try It Yourself!</a></h2>
+        <p>
+            Thus, to move a piece, you can simply specify the piece you want to move and the square you want to move it to. For instance, if a game just started and I had the White pieces, I can tell my knight in g1 (Ng1) to move to square f3 by writing Nf3. For pawns, however, it is enough to simply state the square to move them to, so no need to say Pe3 for example.
+        </p>
+
+        <div>
+            <h3>Try It Yourself!</h3>
+        </div>
+
+        <div>
+
+            <form action="/notation" method="POST">
+                <label for="move">Enter move (UCI format):</label>
+                <input type="text" id="move" name="move" required>
+                <button type="submit">Make Move</button>
+            </form>
+    
+            <div>
+                {{ board._repr_svg_() | safe }}
+            </div>
+            
+        </div>
 
     </body>
 {% endblock %}

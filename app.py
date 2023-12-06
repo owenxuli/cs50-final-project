@@ -50,21 +50,9 @@ def homepage():
 def notation():
     # this function is defined in helpers.py
     squares = generate_board()
-
+    board = chess.Board()
     return render_template('notation.html', squares=squares, board=board)
 
-@app.route("/move", methods=["POST"])
-def move():
-    move_str = request.form["move"]
-    move = chess.Move.from_uci(move_str)
-    
-    if move in board.legal_moves:
-        board.push(move)
-        result = "Valid move: {}".format(move_str)
-    else:
-        result = "Invalid move: {}".format(move_str)
-
-    return render_template("move.html", result=result)
 
 #TO-DO
 @app.route("/openings")
@@ -129,6 +117,7 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
@@ -189,3 +178,6 @@ def register():
     # if the request method is GET, then enter register.html
     else:
         return render_template("register.html")
+
+if __name__ == '__main__':
+    app.run(debug=True)
