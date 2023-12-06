@@ -70,10 +70,24 @@
         <div>
 
             <form action="/notation" method="POST">
-                <label for="move">Enter move (UCI format):</label>
+                <label for="move">Which piece moved?</label>
                 <input type="text" id="move" name="move" required>
-                <button type="submit">Make Move</button>
+                <button type="submit">Submit</button>
             </form>
+
+            <form action="/notation" method="POST">
+                <label for="move">What is the name of the final-position square?</label>
+                <input type="text" id="move" name="move" required>
+                <button type="submit">Submit</button>
+            </form>
+    
+
+            <form action="/notation" method="POST">
+                <label for="move">What is the final UCI notation?</label>
+                <input type="text" id="move" name="move" required>
+                <button type="submit">Submit</button>
+            </form>
+    
     
             <div>
                 {{ board._repr_svg_() | safe }}
