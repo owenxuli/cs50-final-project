@@ -65,18 +65,11 @@ def answer():
         correct_answer1 = "rd8f8"
         correct_answer2 = "Ra1a3"
         correct_answer3 = "Qh4e1"
-            
-        if answer1 == correct_answer1:
-            flash("Correct!")
-        else:
-            flash("Try again!")
+        
+        if not answer1 or not answer2 or not answer3:
+            flash("Please respond all questions.")
 
-        if answer2 == correct_answer2:
-            flash("Correct!")
-        else:
-            flash("Try again!")
-
-        if answer3 == correct_answer3:
+        if answer1 == correct_answer1 and answer2 == correct_answer2 and correct_answer3:
             flash("Correct!")
         else:
             flash("Try again!")
