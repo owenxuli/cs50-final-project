@@ -57,33 +57,33 @@ def notation():
 def answer():
     if request.method == "POST":
         # this function is defined in helpers.py
-        squares = generate_board()
 
-        piece_answer = request.form.get("piece")
-        square_answer = request.form.get("square")
-        uci_answer = request.form.get("uci")
+        answer1 = request.form.get("answer1")
+        answer2 = request.form.get("answer2")
+        answer3 = request.form.get("answer3")
 
-        if not piece_answer or not square_answer or not uci_answer:
-            return apology("Please respond")
+        correct_answer1 = "rd8f8"
+        correct_answer2 = "Ra1a3"
+        correct_answer3 = "Qh4e1"
             
-        if piece_answer != "P":
-            return apology("Incorrect piece, try again!")
+        if answer1 == correct_answer1:
+            flash("Correct!")
         else:
-            flash("Success!")
+            flash("Try again!")
 
-        if square_answer != "e4":
-            return apology("Incorrect square, try again!")
+        if answer2 == correct_answer2:
+            flash("Correct!")
         else:
-            flash("Success!")
+            flash("Try again!")
 
-        if uci_answer != "e4":
-            return apology("Incorrect notation, try again!")
+        if answer3 == correct_answer3:
+            flash("Correct!")
         else:
-            flash("Success!")
+            flash("Try again!")
         
-        return render_template("answer.html", squares=squares, board=board)
+        return render_template("answer.html")
     else:
-        return render_template("answer.html", board=board)
+        return render_template("answer.html")
         
 #TO-DO
 @app.route("/openings")

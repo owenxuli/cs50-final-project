@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block main %}
-    <h1>Practice Notation</h1>
     <body>
 
         <div>
@@ -15,29 +14,27 @@
         <div>
 
             <form action="/answer" method="post">
-                <label>Which piece moved?</label>
-                <input type="text" id="piece" name="piece" required placeholder="Piece notation">
-                <button type="submit">Submit</button>
+                <label>What is the notation of the movement described by #1?</label>
+                <input type="text" id="answer1" name="answer1" required placeholder="Notation">
+                <button type="submit">Check</button>
             </form>
 
             <form action="/answer" method="post">
-                <label>What is the name of the final-position square?</label>
-                <input type="text" id="square" name="square" required placeholder="Square notation">
-                <button type="submit">Submit</button>
+                <label>What is the notation of the movement described by #2?</label>
+                <input type="text" id="answer2" name="answer2" required placeholder="Notation">
+                <button type="submit">Check</button>
             </form>
     
 
             <form action="/answer" method="post">
-                <label>What is the final UCI notation?</label>
-                <input type="text" id="uci" name="uci" required placeholder="Final notation">
-                <button type="submit">Submit</button>
+                <label>What is the notation of the movement described by #3?</label>
+                <input type="text" id="answer3" name="answer3" required placeholder="Notation">
+                <button type="submit">Check</button>
             </form>
-    
-    
-            <div>
-                {{ board._repr_svg_() | safe }}
-            </div>
             
+            <div>
+                <img src="/static/practice.png" alt="Movement of pieces">
+            </div>
         </div>
 
     </body>
