@@ -82,6 +82,8 @@ def answer():
 @app.route("/openings")
 @login_required
 def openings():
+    
+    board = chess.Board("rnbqkbnr/pp1ppppp/8/2p5/4P/3/8/PPPP1PPP/RNBQKBNR")
     return render_template("openings.html")
 
 
