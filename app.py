@@ -68,13 +68,19 @@ def answer():
             
         if piece_answer != "P":
             return apology("Incorrect piece, try again!")
-        elif square_answer != "e4":
+        else:
+            flash("Success!")
+
+        if square_answer != "e4":
             return apology("Incorrect square, try again!")
-        elif uci_answer != "e4":
+        else:
+            flash("Success!")
+
+        if uci_answer != "e4":
             return apology("Incorrect notation, try again!")
         else:
             flash("Success!")
-    
+        
         return render_template("answer.html", squares=squares, board=board)
     else:
         return render_template("answer.html", board=board)
