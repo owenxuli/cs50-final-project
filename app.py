@@ -48,12 +48,37 @@ def homepage():
 @app.route("/notation")
 @login_required
 def notation():
-    # this function is defined in helpers.py
     squares = generate_board()
-    board = chess.Board()
+    
     return render_template('notation.html', squares=squares, board=board)
 
+@app.route("/answer", methods=["GET", "POST"])
+@login_required
+def answer():
+    if request.method == "POST":
+        # this function is defined in helpers.py
+        squares = generate_board()
 
+        piece_answer = request.form.get("piece")
+        square_answer = request.form.get("square")
+        uci_answer = request.form.get("uci")
+
+        if not piece_answer or not square_answer or not uci_answer:
+            return apology("Please respond")
+            
+        if piece_answer != "P":
+            return apology("Incorrect piece, try again!")
+        elif square_answer != "e4":
+            return apology("Incorrect square, try again!")
+        elif uci_answer != "e4":
+            return apology("Incorrect notation, try again!")
+        else:
+            flash("Success!")
+    
+        return render_template("answer.html", squares=squares, board=board)
+    else:
+        return render_template("answer.html", board=board)
+        
 #TO-DO
 @app.route("/openings")
 @login_required

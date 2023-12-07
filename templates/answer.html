@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Practice Notation
+{% endblock %}
+
+{% block main %}
+    <h1>Practice Notation</h1>
+    <body>
+
+        <div>
+            <h3>Try It Yourself!</h3>
+        </div>
+
+        <div>
+
+            <form action="/answer" method="post">
+                <label>Which piece moved?</label>
+                <input type="text" id="piece" name="piece" required placeholder="Piece notation">
+                <button type="submit">Submit</button>
+            </form>
+
+            <form action="/answer" method="post">
+                <label>What is the name of the final-position square?</label>
+                <input type="text" id="square" name="square" required placeholder="Square notation">
+                <button type="submit">Submit</button>
+            </form>
+    
+
+            <form action="/answer" method="post">
+                <label>What is the final UCI notation?</label>
+                <input type="text" id="uci" name="uci" required placeholder="Final notation">
+                <button type="submit">Submit</button>
+            </form>
+    
+    
+            <div>
+                {{ board._repr_svg_() | safe }}
+            </div>
+            
+        </div>
+
+    </body>
+{% endblock %}
