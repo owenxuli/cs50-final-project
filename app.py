@@ -55,19 +55,24 @@ def notation():
 @app.route("/answer", methods=["GET", "POST"])
 @login_required
 def answer():
+    # this will generate a chess board, where every number represents the number of empty squares
+    # and the letters represent the pieces based on standard chess notation
+    board_string = "3r3n/1k6/8/B7/4P2Q/8/8/R6K"
+    board = chess.Board(board_string)
+
+    # this will generate an svg image of the board that can be displayed on the website
+    svg_board = chess.svg.board(board=board, size=800)
+
     if request.method == "POST":
-        board_string = "r1bqkb1r/pppp1Qpp/2n2n2/4p3/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 0 4"
-        board = chess.Board(board_string)
-        svg_board = chess.svg.board(board=board)
 
         # get the answers from the user
         answer1 = request.form.get("answer1")
         answer2 = request.form.get("answer2")
         answer3 = request.form.get("answer3")
 
-        correct_answer1 = "rd8f8"
-        correct_answer2 = "Ra1a3"
-        correct_answer3 = "Qh4e1"
+        correct_answer1 = "rd8d6"
+        correct_answer2 = "Ra1f1"
+        correct_answer3 = "Qh4g5"
         
         # check if the user answered all notations
         if not answer1 or not answer2 or not answer3:
