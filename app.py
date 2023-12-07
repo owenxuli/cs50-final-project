@@ -88,8 +88,10 @@ def answer():
 @login_required
 def openings():
     
-    board = chess.Board("rnbqkbnr/pp1ppppp/8/2p5/4P/3/8/PPPP1PPP/RNBQKBNR")
-    return render_template("openings.html")
+    board = chess.Board("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR")
+    
+    svg_board = chess.svg.board(board = board, size = 500)
+    return render_template("openings.html", board = svg_board)
 
 
 #TO-DO
