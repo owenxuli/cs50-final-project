@@ -202,6 +202,3 @@ def register():
     # if the request method is GET, then enter register.html
     else:
         return render_template("register.html")
-
-if __name__ == '__main__':
-    app.run(debug=True)
