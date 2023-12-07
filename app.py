@@ -69,10 +69,10 @@ def answer():
         if not answer1 or not answer2 or not answer3:
             flash("Please respond all questions.")
 
-        if answer1 == correct_answer1 and answer2 == correct_answer2 and correct_answer3:
+        if answer1 == correct_answer1 and answer2 == correct_answer2 and answer3 == correct_answer3:
             flash("Correct!")
         else:
-            flash("Try again!")
+            flash("Incorrect. Please try again.")
         
         return render_template("answer.html")
     else:

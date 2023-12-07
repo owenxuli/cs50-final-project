@@ -14,23 +14,26 @@
         <div>
 
             <form action="/answer" method="post">
-                <label>What is the notation of the movement described by #1?</label>
-                <input type="text" id="answer1" name="answer1" required placeholder="Notation">
-                <button type="submit">Check</button>
-            </form>
+                <label>What is the notation of the following movements?</label>
 
-            <form action="/answer" method="post">
-                <label>What is the notation of the movement described by #2?</label>
-                <input type="text" id="answer2" name="answer2" required placeholder="Notation">
-                <button type="submit">Check</button>
-            </form>
-    
+                <div style="margin-top: 20px;"></div>
 
-            <form action="/answer" method="post">
-                <label>What is the notation of the movement described by #3?</label>
-                <input type="text" id="answer3" name="answer3" required placeholder="Notation">
-                <button type="submit">Check</button>
+                <div class="mb-3">
+                    <input type="text" id="answer1" name="answer1" required placeholder="Notation for movement 1">
+                </div>
+
+                <div class="mb-3">
+                    <input type="text" id="answer2" name="answer2" required placeholder="Notation for movement 2">
+                </div>
+                
+                <div class="mb-3">
+                    <input type="text" id="answer3" name="answer3" required placeholder="Notation for movement 3">
+                </div>
+                
+                <button class="btn btn-primary" type="submit">Check</button>
             </form>
+            
+            <div style="margin-top: 20px;"></div>
             
             <div>
                 <img src="/static/practice.png" alt="Movement of pieces">
