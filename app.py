@@ -55,10 +55,10 @@ def notation():
 @app.route("/answer", methods=["GET", "POST"])
 @login_required
 def answer():
-    board_string = "r1bqkb1r/pppp1Qpp/2n2n2/4p3/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 0 4"
+    board_string = "3r3r/8/8/R7/4Q2Q/8/8/R6Q"
     board = chess.Board(board_string)
-    svg_board = chess.svg.board(board=board)
-    
+    svg_board = chess.svg.board(board=board, size=800)
+
     if request.method == "POST":
 
         # get the answers from the user
@@ -88,8 +88,6 @@ def answer():
 @app.route("/openings")
 @login_required
 def openings():
-    
-    board = chess.Board("rnbqkbnr/pp1ppppp/8/2p5/4P/3/8/PPPP1PPP/RNBQKBNR")
     return render_template("openings.html")
 
 
