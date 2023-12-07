@@ -66,9 +66,9 @@ def answer():
         answer2 = request.form.get("answer2")
         answer3 = request.form.get("answer3")
 
-        correct_answer1 = "rd8f8"
-        correct_answer2 = "Ra1a3"
-        correct_answer3 = "Qh4e1"
+        correct_answer1 = "rd8d6"
+        correct_answer2 = "Ra1f1"
+        correct_answer3 = "Qh4g5"
         
         # check if the user answered all notations
         if not answer1 or not answer2 or not answer3:
