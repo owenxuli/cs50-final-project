@@ -55,8 +55,12 @@ def notation():
 @app.route("/answer", methods=["GET", "POST"])
 @login_required
 def answer():
+    # this will generate a chess board, where every number represents the number of empty squares
+    # and the letters represent the pieces based on standard chess notation
     board_string = "3r3r/8/8/R7/4Q2Q/8/8/R6Q"
     board = chess.Board(board_string)
+
+    # this will generate an svg image of the board that can be displayed on the website
     svg_board = chess.svg.board(board=board, size=800)
 
     if request.method == "POST":
