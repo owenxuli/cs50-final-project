@@ -6,35 +6,8 @@
 
 {% block main %}
     <h1>Common Chess Openings</h1>
-    <body>
-        By Owen Xu and Daniel Zhang
-    </body>
 
-    <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">Sicilian </button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-      </div>
-      
-      <div id="London" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
-        <p>{{ board|safe }}
-      </div>
-      
-      <div id="Paris" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
-      </div>
-      
-      <div id="Tokyo" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
-      </div>
-
-      <script>
+    <script>
         function openCity(evt, cityName) {
             // Declare all variables
             var i, tabcontent, tablinks;
@@ -56,5 +29,64 @@
             evt.currentTarget.className += " active";
           }
       </script>
+
+      <style>
+        .content-container {
+            display: flex;
+            align-items: center; 
+        }
+
+        .board-container {
+            margin-left: 10px; 
+        }
+
+    </style>
+
+    <div style="margin-top: 50px;"></div>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Sicilian Defense')">Sicilian Defense</button>
+        <button class="tablinks" onclick="openCity(event, 'Ruy López')">Ruy López</button>
+        <button class="tablinks" onclick="openCity(event, 'Italian Game')">Italian Game</button>
+        <button class="tablinks" onclick="openCity(event, 'Caro-Kann Defense')">Caro-Kann Defense</button>
+        <button class="tablinks" onclick="openCity(event, 'Queen's Gambit')">Queen's Gambit</button>
+      </div>
+      
+      <div class="content-container">
+        <div class="board-container">
+            {{ board|safe }}
+        </div>
+
+        <div style="margin-right: 50px;"></div>
+
+        <div id="Sicilian Defense">
+            <p>Move Order</p>
+            <p>Pros vs. Cons</p>
+            <p>Chess Masters Who Play This Opening</p>
+        </div>
+    </div>
+
+    <!--
+
+      <div id="Sicilian Defense" class="tabcontent, board_right">
+        <p>{{ board|safe }}
+            <p>Move Order</p>
+            <p>Pros vs. Cons</p>
+            <p>Chess Masters Who Play This Opening</p>
+      </div>
+    
+      
+      <div id="Ruy López" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+      </div>
+      
+      <div id="Italian Game" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+      -->
+
+
 
 {% endblock %}
