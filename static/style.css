@@ -30,6 +30,15 @@ nav .navbar-brand
     color: #fff;
 }
 
+.board-center {
+    display: flex;
+    align-items: center; 
+}
+
+.board-right {
+    margin-left: 60px; 
+}
+
 p {
     max-width: 750px; /* Adjust the value to your desired maximum width */
     margin: 0 auto;   /* Centers the paragraph within its container */

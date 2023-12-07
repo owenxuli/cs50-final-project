@@ -30,18 +30,6 @@
           }
       </script>
 
-      <style>
-        .content-container {
-            display: flex;
-            align-items: center; 
-        }
-
-        .board-container {
-            margin-left: 10px; 
-        }
-
-    </style>
-
     <div style="margin-top: 50px;"></div>
 
     <div class="tab">
@@ -52,12 +40,12 @@
         <button class="tablinks" onclick="openCity(event, 'Queen's Gambit')">Queen's Gambit</button>
       </div>
       
-      <div class="content-container">
-        <div class="board-container">
+      <div class="board-center">
+        <div class="board-right">
             {{ board|safe }}
         </div>
 
-        <div style="margin-right: 50px;"></div>
+        <div style="margin-right: 70px;"></div>
 
         <div id="Sicilian Defense">
             <p>Move Order</p>
