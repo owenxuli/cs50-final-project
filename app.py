@@ -56,8 +56,11 @@ def notation():
 @login_required
 def answer():
     if request.method == "POST":
-        # this function is defined in helpers.py
+        board_string = "r1bqkb1r/pppp1Qpp/2n2n2/4p3/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 0 4"
+        board = chess.Board(board_string)
+        svg_board = chess.svg.board(board=board)
 
+        # get the answers from the user
         answer1 = request.form.get("answer1")
         answer2 = request.form.get("answer2")
         answer3 = request.form.get("answer3")
@@ -66,17 +69,19 @@ def answer():
         correct_answer2 = "Ra1a3"
         correct_answer3 = "Qh4e1"
         
+        # check if the user answered all notations
         if not answer1 or not answer2 or not answer3:
             flash("Please respond all questions.")
 
+        # check if the answers are correct
         if answer1 == correct_answer1 and answer2 == correct_answer2 and answer3 == correct_answer3:
             flash("Correct!")
         else:
             flash("Incorrect. Please try again.")
         
-        return render_template("answer.html")
+        return render_template("answer.html", svg_board=svg_board)
     else:
-        return render_template("answer.html")
+        return render_template("answer.html", svg_board=svg_board)
         
 #TO-DO
 @app.route("/openings")
