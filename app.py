@@ -93,10 +93,21 @@ def answer():
 @login_required
 def openings():
     
-    board = chess.Board("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR")
+    sd_board = chess.Board("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR")
+    sd_board = chess.svg.board(board = sd_board, size = 400)
     
-    svg_board = chess.svg.board(board = board, size = 400)
-    return render_template("openings.html", board = svg_board)
+    rl_board = chess.Board("rnbqkbnr/pppp1ppp/8/4p3/4P3")
+    rl_board = chess.svg.board(board = rl_board, size = 400)
+    
+    ig_board = chess.Board("")
+    ig_board = chess.svg.board(board = ig_board, size = 400)
+    
+    ckd_board = chess.Board("")
+    ckd_board = chess.svg.board(board = ckd_board, size = 400)
+    
+    qg_board = chess.Board("")
+    qg_board = chess.svg.board(board = qg_board, size = 400)
+    return render_template("openings.html", sd_board = sd_board, rl_board = rl_board, ig_board = ig_board, ckd_board = ckd_board, qg_board = qg_board)
 
 
 #TO-DO
