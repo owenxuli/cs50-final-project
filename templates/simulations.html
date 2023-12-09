@@ -7,17 +7,34 @@
 {% block main %}
 
 <body>
-    <div id="board1" name="board1" style="width: 400px"></div>
+    
+    <div class="midboard">
+        <div id="board1" name="board1" style="width: 800px"></div>
+        <div id="message"></div>
+    </div>
+
+    <button id="move1Btn">e2-e4</button>
+    <button id="move2Btn">d2-d4, g8-f6</button>
+    <button id="startPositionBtn">Start Position</button>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/static/chessboardjs/chessboard-1.0.0.js"></script>
+
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var board1 = Chessboard('board1', {
-                draggable: true,
-                dropOffBoard: 'trash',
-                position: 'start'
+                position: 'start',
+            
             });
+        $('#move1Btn').on('click', function () {
+        board1.move('e2-e4')
+        })
+
+        $('#move2Btn').on('click', function () {
+        board1.move('d2-d4', 'g8-f6')
+        })
+
+        $('#startPositionBtn').on('click', board1.start)
         });
     </script>
 </body>
