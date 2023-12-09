@@ -10,7 +10,7 @@ We used two Python libraries: chess, and chess.svg. So the first step is to impo
 1. python3 -m pip install chess
 2. python3 -m pip install chess.svg
 
-We also used Chessboard.js, a free-to-use resource that allows easy implementation of interactive chess boards embedded into websites through JavaScript. In order to download and use Chessboard.js. The folder containing the downloaded files are inside the chessboardjs-1.0.0 folder, including the license for the usage of the code. To use the Chessboard.js resource, we made copies of the JS, CSS，and image files in our static folder so they are easily accesible.
+We also used Chessboard.js, a free-to-use resource that allows easy implementation of interactive chess boards embedded into websites through JavaScript. In order to download and use Chessboard.js. The folder containing the downloaded files are inside the chessboardjs-1.0.0 folder, including the license for the usage of the code. To use the Chessboard.js resource, we made copies of the JS, CSS，and image files (in the static/pieces/ folder) in our static/ folder so they are easily accesible.
 
 To run the program, use "flask run" in the terminal, and enter the server.
 
@@ -24,7 +24,7 @@ After registering a new user and logging in, you can then proceed to use all the
 
 From the Finance pset from week 9, we borrowed the login and register functions. We also imported most of the same libraries that the finance pset required, but of course we also imported the chess and chess.svg libraries to generate the chess boards. In app.py, we first configure to use users.db. We used SQL to implement the login and register functions. Notice that the users.sql file contains the code, that is only needed to be ran once when running sqlite3 in the terminal. The users.db table only contains the id of the user, the username of the user, and the hashed password of the user. In app.py, we also configure to use openings.db, which contains the name, the opening color, and the variations of each of the selected chess openings, which are displayed on the homepage. The code we used to create named table is also inside the sql file.
 
-The chess library generates boards through the chess.Board() function. We specified the location of each of the pieces using the standard chess (UCI) notation described in the notation.html page. In short, the chess.Board() function takes a string as an input; such string must be in the following format: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR", where every letter represents a piece and its color, each number represents the number of spaces before a piece, if any, and every slash represent the beginning of the following row, from the top row down.
+The chess library generates boards through the chess.Board() function. We specified the location of each of the pieces using the standard chess (UCI) notation described in the notation.html page. In short, the chess.Board() function takes a string as an input; such string must be in the following format: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR", where every letter represents a piece and its color, each number represents the number of spaces before a piece, if any, and every slash represents the beginning of the following row, from the top row down.
 
 ### helpers.py
 
