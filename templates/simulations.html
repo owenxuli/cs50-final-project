@@ -9,12 +9,17 @@
 <body>
     <div id="board1" name="board1" style="width: 400px"></div>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/static/chessboardjs/chessboard-1.0.0.js"></script>
     <script>
-        var board1 = Chessboard('board1', {
-            draggable: true,
-            dropOffBoard: 'trash',
-            sparePieces: true
+        $(document).ready(function() {
+            console.log('Before Chessboard initialization');
+            var board1 = Chessboard('board1', {
+                draggable: true,
+                dropOffBoard: 'trash',
+                sparePieces: true
+            });
+            console.log('After Chessboard initialization');
         });
     </script>
 </body>
