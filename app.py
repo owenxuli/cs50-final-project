@@ -94,7 +94,7 @@ def answer():
 def openings():
     
     sd_board = chess.Board("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR")
-    sd_svg_board = chess.svg.board(board = sd_board, size = 400)
+    sd_svg_board = chess.svg.sd_board(board = sd_board, size = 400)
     
     rl_board = chess.Board("r1bqkbnr/pppp1ppp/2n5/1B2p3/4p3/5N2/PPPP1PPP/RNBQK2R")
     rl_svg_board = chess.svg.board(board = rl_board, size = 400)
