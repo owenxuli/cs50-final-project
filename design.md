@@ -6,10 +6,17 @@ This site contains a table listing some of our own favorite chess openings. If y
 
 ## notation.html 
 
-The purpose of this project was to design a website to help beginner chess enthusiasts, like us, learn to navigate the game of chess. This page 
+The purpose of this project was to design a website to help beginner chess enthusiasts, like us, learn to navigate the game of chess. This page introduces the written notation that chess players use to describe motion on a chessboard. We provide a chessboard that indicates what each square on the board is called, as well as how each piece is differentiated between the two colors. As learners, nobody is expected to understand everything just by reading, so we provided a link to answer.html which will be explained in the section below. 
+
+
+## asnwer.html
+
+This site is a follow-up of notation.html. We delivered a board with a set position, the aim of the user is to follow the instructions given in each textbox indicating a move by a specific piece. The user can test their knowledge by attempting to fill in the correct responses for each corresponding textbox with the notation they learned in notation.html. 
 
 
 ## openings.html
+
+Given the openings in homepage.html, we want to see what the position looks like on a chessboard. This page offers an image of each opening and their basic informations which include: move order, pros vs cons, and chess masters who play this opening. We implemented a vertical menue bar that enables users to click on the opening of their choice and learn about them. 
 
 ## register.html
 
