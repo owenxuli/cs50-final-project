@@ -16,6 +16,8 @@ To run the program, use "flask run" in the terminal, and enter the server.
 
 Note: to collaborate on the project, we used VS Code and GitHub, so we also had to install some of the libraries pre-installed on the CS50 codespace, such as the cs50 library itself to use the SQL functionality, into our VS Code Desktop version.
 
+Note: we are using Python 3.11.5. At the beginning we were having trouble collaborating since the VS Code of Daniel did not recognize the "flask run" or "pip" commands, but after installing Python 3.11.5 to his computer, all the issues were solved.
+
 After registering a new user and logging in, you can then proceed to use all the subpages freely.
 
 ## Understanding
