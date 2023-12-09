@@ -227,3 +227,10 @@ def register():
     # if the request method is GET, then enter register.html
     else:
         return render_template("register.html")
+    
+    
+
+@app.route("/simulations")
+@login_required
+def rules():
+    return render_template("simulations.html")
