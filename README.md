@@ -34,7 +34,7 @@ Aside from the long_required and apology functions, which we borrowed from the f
 
 ### static/
 
-Inside the static folder, we have our style.css file, which contains all the styling we did to our website so that it looks more appealing. We also have the JavaScript files that some our sites needed for interactive chess boards, buttons, and other functionalities.
+Inside the static folder, we have our style.css file, which contains all the styling we did to our website so that it looks more appealing. We also have the JavaScript files that some our sites needed for interactive chess boards, buttons, and other functionalities. Inside the pieces/ folder, we have png images of each chess piece for the interactive boards in the simulation site.
 
 ### templates/
 
