@@ -117,7 +117,11 @@ def openings():
 def rules():
         board = chess.Board("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
         svg_board = chess.svg.board(board = board, size = 400)
-        return render_template("rules.html", board = svg_board)
+        
+        checkmate = chess.Board("4k3/8/8/7r/8/8/5PP1/5RKq")
+        svg_checkmate = chess.svg.board(board = checkmate, size = 400)
+        
+        return render_template("rules.html", board = svg_board, checkmate = svg_checkmate)
 
 
 @app.route("/login", methods=["GET", "POST"])
