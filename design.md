@@ -16,10 +16,21 @@ This site is a follow-up of notation.html. We delivered a board with a set posit
 
 ## openings.html
 
-Given the openings in homepage.html, we want to see what the position looks like on a chessboard. This page offers an image of each opening and their basic informations which include: move order, pros vs cons, and chess masters who play this opening. We implemented a vertical menue bar that enables users to click on the opening of their choice and learn about them. 
+Given the openings in homepage.html, we want to see what the position looks like on a chessboard. This page offers an image of each opening and their basic informations which include: move order, pros vs cons, and chess masters who play this opening. We implemented a vertical menue bar that enables users to click on the opening of their choice and learn about them. To aid the understanding of our users further, we intentionally inputted the letters and numbers associated with the chessboard within the board frame. This additional feature makes visualizing the move order an easier process. 
 
-## register.html
 
 ## rules.html
 
+In this site, we give an overview of the chess rules. Through the use of boards in various situations, we were able to provide what a checkmate or draw looks like. There contains no interactive features on this page, as its purpose is solely to provide information to those who are not familiar with the rules already, or to answer any skepticism the user had. 
+
 ## simulations.html
+
+## register.html
+
+## login.html
+
+## layout.html 
+
+## apology.html
+
+Similar to the apology.html we utilized in the finance pset. We changed the picture from the cat to a picture of the previous World Champion, Magnus Carlsen. 
