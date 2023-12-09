@@ -180,5 +180,33 @@
             </p>
         </section>
 
+        <div style="margin-top: 80px;"></div>
+
+        <header>
+            <h3>End of the Game</h3>
+        </header>
+
+        <div style="margin-top: 40px;"></div>
+
+        <header>
+            <h5>Checkmate</h5>
+        </header>
+
+        <section>
+            <p>
+                {{ checkmate|safe }}
+            <p>
+        </section>
+
+        <section>
+            <p>
+                The illustration depicts a checkmate scenario. The black queen poses a threat to the white king, and the vacant square to which the king might move is also under threat. Moreover, the king is unable to capture the queen since doing so would subject it to a check from the rook.
+            </p>
+
+            <p>
+                When a player's king is under threat of check, and there exists no valid move that the player can execute to evade check, the king is declared checkmated. This results in the conclusion of the game, and the player facing checkmate is the loser. It's noteworthy that, in contrast to the other pieces, the king is never captured.
+            </p>
+        </section>
+
     </body>
 {% endblock %}
