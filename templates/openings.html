@@ -36,6 +36,8 @@
         <button class="tablinks" onclick="openCity(event, 'SicilianDefense')">Sicilian Defense</button>
         <button class="tablinks" onclick="openCity(event, 'RuyLópez')">Ruy López</button>
         <button class="tablinks" onclick="openCity(event, 'ItalianGame')">Italian Game</button>
+        <button class="tablinks" onclick="openCity(event, 'CaroKannDefense')">Caro-Kann Defense</button>
+        <button class="tablinks" onclick="openCity(event, 'QueensGambit')">Queen's Gambit</button>
       </div>
       
       <div id="SicilianDefense" class="tabcontent">
@@ -62,7 +64,29 @@
 
       <div id="ItalianGame" class="tabcontent">
         <div class="content-container">
-            <p class="openings-left">{{ sd_board|safe }}</p>
+            <p class="openings-left">{{ ig_board|safe }}</p>
+            <div class="text-right-container">
+                <p class="text-left">Move Order</p>
+                <p class="text-left">Pros vs. Cons</p>
+                <p class="text-left">Chess Masters Who Play This Opening</p>
+            </div>
+        </div>
+      </div>
+
+      <div id="CaroKannDefense" class="tabcontent">
+        <div class="content-container">
+            <p class="openings-left">{{ ck_board|safe }}</p>
+            <div class="text-right-container">
+                <p class="text-left">Move Order</p>
+                <p class="text-left">Pros vs. Cons</p>
+                <p class="text-left">Chess Masters Who Play This Opening</p>
+            </div>
+        </div>
+      </div>
+
+      <div id="QueensGambit" class="tabcontent">
+        <div class="content-container">
+            <p class="openings-left">{{ qg_board|safe }}</p>
             <div class="text-right-container">
                 <p class="text-left">Move Order</p>
                 <p class="text-left">Pros vs. Cons</p>

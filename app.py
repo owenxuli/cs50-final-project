@@ -99,7 +99,16 @@ def openings():
     rl_board = chess.Board("r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R")
     svg_rl_board = chess.svg.board(board = rl_board, size = 400)
     
-    return render_template("openings.html", sd_board = svg_sd_board, rl_board = svg_rl_board)
+    ig_board = chess.Board("r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R")
+    svg_ig_board = chess.svg.board(board = ig_board, size = 400)
+    
+    ck_board = chess.Board("rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR")
+    svg_ck_board = chess.svg.board(board = ck_board, size = 400)
+    
+    qg_board = chess.Board("rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR")
+    svg_qg_board = chess.svg.board(board = qg_board, size = 400)
+    
+    return render_template("openings.html", sd_board = svg_sd_board, rl_board = svg_rl_board, ig_board = svg_ig_board, ck_board = svg_ck_board, qg_board = svg_qg_board)
 
 
 #TO-DO
