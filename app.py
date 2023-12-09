@@ -94,20 +94,12 @@ def answer():
 def openings():
     
     sd_board = chess.Board("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR")
-    sd_svg_board = chess.svg.sd_board(board = sd_board, size = 400)
+    svg_sd_board = chess.svg.board(board = sd_board, size = 400)
     
     rl_board = chess.Board("r1bqkbnr/pppp1ppp/2n5/1B2p3/4p3/5N2/PPPP1PPP/RNBQK2R")
     rl_svg_board = chess.svg.board(board = rl_board, size = 400)
     
-    ig_board = chess.Board("")
-    ig_svg_board = chess.svg.board(board = ig_board, size = 400)
-    
-    ckd_board = chess.Board("")
-    ckd_sg_board = chess.svg.board(board = ckd_board, size = 400)
-    
-    qg_board = chess.Board("")
-    qg_svg_board = chess.svg.board(board = qg_board, size = 400)
-    return render_template("openings.html", sd_board = sd_svg_board)
+    return render_template("openings.html", sd_board = svg_sd_board)
 
 
 #TO-DO
