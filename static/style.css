@@ -132,3 +132,10 @@ li1 {
     display: flex;
     align-items: center;
 }
+
+li2 {
+    margin-left: 400px;
+    display: flex;
+    text-align: left;
+    max-width: 800px;
+}
