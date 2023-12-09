@@ -116,8 +116,8 @@ def openings():
 @login_required
 def rules():
         board = chess.Board("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
-        svg_sd_board = chess.svg.board(board = board, size = 400)
-        return render_template("rules.html", board = board)
+        svg_board = chess.svg.board(board = board, size = 400)
+        return render_template("rules.html", board = svg_board)
 
 
 @app.route("/login", methods=["GET", "POST"])

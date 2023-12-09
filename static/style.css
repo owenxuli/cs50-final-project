@@ -126,3 +126,9 @@ p {
 #SicilianDefense {
     display: block;
 }
+
+li1 {
+    margin-left: 400px;
+    display: flex;
+    align-items: center;
+}
