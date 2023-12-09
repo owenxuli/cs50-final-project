@@ -3,13 +3,17 @@ $(document).ready(function () {
         position: 'start',
     
     });
-$('#move1Btn').on('click', function () {
-board5.move('e2-e4')
+$('#5move1').on('click', function () {
+board5.move('d2-d4')
 })
 
-$('#move2Btn').on('click', function () {
-board5.move('d2-d4', 'g8-f6')
+$('#5move2').on('click', function () {
+board5.move('d7-d5')
 })
 
-$('#startPositionBtn').on('click', board5.start)
+$('#5move3').on('click', function () {
+    board5.move('c2-c4')
+})
+
+$('#5startPosition').on('click', board5.start)
 });
