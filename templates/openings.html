@@ -32,64 +32,36 @@
 
     <div style="margin-top: 50px;"></div>
 
-    <div class="sidenav">
-        <a href="#">Sicilian Defense</a>
-        <a href="#">Ruy López</a>
-        <a href="#">Italian Game</a>
-        <a href="#">Caro-Kann Defense</a>
-        <a href="#">Queen's Gambit</a>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+        <button class="tablinks" onclick="openCity(event, 'Sicilian Defense')">Sicilian Defense</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
       </div>
       
-      <!-- Page content -->
-      <div class="Sicilian Defense">
-        sd
+      <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
       </div>
-
-      <div class="Ruy López">
-        rl
-      </div>
-
-    <div style="margin-right: 70px;"></div>
       
-      <!-- Page content -->
-      <div class="main">
-        ...
-      </div>
-
-    <div id="Sicilian Defense">
-        <div class="chessboard board-right">
-            {{ sd_board|safe }}
+      <div id="Sicilian Defense" class="tabcontent">
+        <div class="content-container">
+            <p class="openings-left">{{ sd_board|safe }}</p>
+            <div class="text-right-container">
+                <p class="text-left">Move Order</p>
+                <p class="text-left">Pros vs. Cons</p>
+                <p class="text-left">Chess Masters Who Play This Opening</p>
+            </div>
         </div>
-        <p>Move Order</p>
-        <p>Pros vs. Cons</p>
-        <p>Chess Masters Who Play This Opening</p>
-    </div> 
+      </div>
       
-    <div id="Ruy López" class="tabcontent">
-        <p>Move Order</p>
-        <p>Pros vs. Cons</p>
-        <p>Chess Masters Who Play This Opening</p>
-    </div>
-    
-    <div id="Italian Game" class="tabcontent">
-        <p>Move Order</p>
-        <p>Pros vs. Cons</p>
-        <p>Chess Masters Who Play This Opening</p>
-    </div>
-
-    <div id="Caro-Kann Defense" class="tabcontent">
-        <p>Move Order</p>
-        <p>Pros vs. Cons</p>
-        <p>Chess Masters Who Play This Opening</p>
-    </div>
-
-    <div id="Queen's Gambit" class="tabcontent">
-        <p>Move Order</p>
-        <p>Pros vs. Cons</p>
-        <p>Chess Masters Who Play This Opening</p>
-    </div>
-
-
+      <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+      
+    <!--
+    <div style="margin-right: 70px;"></div>
+-->
 
 
 {% endblock %}
