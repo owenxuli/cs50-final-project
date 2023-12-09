@@ -4,6 +4,12 @@ nav .navbar-brand
     font-size: xx-large;
 }
 
+body {
+    background-color: white;
+    background-image: url("/static/chess2.jpg");
+    background-repeat: no-repeat;
+}
+
 .chessboard {
     display: grid;
     grid-template-columns: repeat(8, 80px);
