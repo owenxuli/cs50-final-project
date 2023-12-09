@@ -232,5 +232,5 @@ def register():
 
 @app.route("/simulations")
 @login_required
-def rules():
+def simulations():
     return render_template("simulations.html")
