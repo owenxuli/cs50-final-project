@@ -224,5 +224,45 @@
             </p>
         </section>
 
+        <div style="margin-top: 40px;"></div>
+
+        <header>
+            <h5>Draws</h5>
+        </header>
+
+        <section>
+            <p>
+                {{ draws|safe }}
+            <p>
+        </section>
+
+        <section>
+            <p>
+                The game ends in a draw if any of these conditions occur:
+            </p>
+
+            <p>
+                <ul>
+                    <li2>- The player to move is not in check and has no legal move. This situation is called a stalemate. An example of such a position is shown in the adjacent diagram.</li2>
+                    <li2>- The game reaches a dead position.</li2>
+                    <li2>- Both players agree to a draw after one of the players makes such an offer.</li2>
+                    <li2>- The player having the move claims a draw by correctly declaring that one of the following conditions exists, or by correctly declaring an intention to make a move which will bring about one of these conditions:</li2>
+                    <ul>
+                        <li2>- The same board position has occurred three times with the same player to move and all pieces having the same rights to move, including the right to castle or capture en passant (see threefold repetition rule).</li2>
+                        <li2>- There has been no capture or pawn move in the last fifty moves by each player, if the last move was not a checkmate.</li2>
+                    </ul>
+                    <li2>- The arbiter intervenes to declare a draw, without a draw request necessary:</li2>
+                    <ul>
+                        <li2>- When the same board position has occurred five times.</li2>
+                        <li2>- When the moves without capture or pawn move extend up to seventy-five.</li2>
+                    </ul>
+                    <li2>- A player would normally lose by running out of time or by resigning, but their opponent has no way to checkmate them via any series of legal moves.</li2>
+                </ul>
+            </p>
+            <p>
+                There is no longer a rule specifically defining perpetual check as a draw. In such a situation, either the threefold repetition rule or the fifty-move rule will eventually come into effect. More often, the players will simply agree to a draw.
+            </p>
+        </section>
+
     </body>
 {% endblock %}
