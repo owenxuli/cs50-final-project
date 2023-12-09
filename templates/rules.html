@@ -264,5 +264,48 @@
             </p>
         </section>
 
+        <div style="margin-top: 40px;"></div>
+
+        <header>
+            <h5>Dead Position</h5>
+        </header>
+
+        <section>
+            <p>
+                {{ deadposition|safe }}
+            <p>
+        </section>
+
+        <section>
+            <p>
+                A dead position, within the realm of chess, denotes a state wherein neither player can achieve checkmate against their opponent's king through any series of legal moves. Despite occasional instances where players continue in such situations, the established rules of chess dictate that the game is promptly concluded the moment a dead position emerges on the board. These dead positions can be classified into two types:
+            </p>
+
+            <p>
+                <ul>
+                    <li2>- Positions with only the following pieces. These are known as draws by insufficient material.</li2>
+                    <ul>
+                        <li2>- king against king</li2>
+                        <li2>- king against king and bishop</li2>
+                        <li2>- king against king and knight</li2>
+                        <li2>- king and bishop against king and bishop, with both bishops on squares of the same color</li2>
+                    </ul>
+                    <li2>- Other positions in which checkmate is impossible by any sequence of legal moves. This can occur in blocked positions where it is impossible for either side to make a capture.</li2>
+                </ul>
+            </p>
+        </section>
+
+        <div style="margin-top: 40px;"></div>
+
+        <header>
+            <h5>Flag-fall</h5>
+        </header>
+
+        <section>
+            <p>
+                In a game played with time control, a player will suffer a loss if they exhaust all the allotted time on their clock, a scenario known as flag-fall. This outcome applies unless the opponent is incapable of achieving checkmate. Various forms of time control exist, where a player may have a predetermined total time for the entire game or be required to execute a specific number of moves within a set time frame. Additionally, a minor time increment may be granted for each move executed.
+            </p>
+        </section>
+
     </body>
 {% endblock %}

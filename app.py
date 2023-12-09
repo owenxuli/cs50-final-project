@@ -125,7 +125,10 @@ def rules():
         draws = chess.Board("2k5/8/8/3QB3/8/4K3/8/8")
         svg_draws = chess.svg.board(board = draws, size = 400)
         
-        return render_template("rules.html", board = svg_board, checkmate = svg_checkmate, draws = svg_draws)
+        deadposition = chess.Board("8/2b1k3/7p/p1p1p1pP/PpP1P1P1/1P1BK3/8/8")
+        svg_deadposition = chess.svg.board(board = deadposition, size = 400)
+        
+        return render_template("rules.html", board = svg_board, checkmate = svg_checkmate, draws = svg_draws, deadposition = svg_deadposition)
 
 
 @app.route("/login", methods=["GET", "POST"])
