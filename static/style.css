@@ -114,4 +114,9 @@ p {
   width: 70%;
   border-left: none;
   height: 800px;
+  display: none; 
+}
+
+#SicilianDefense {
+    display: block;
 }
