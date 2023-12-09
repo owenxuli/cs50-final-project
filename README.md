@@ -10,13 +10,13 @@ We used two Python libraries: chess, and chess.svg. So the first step is to impo
 1. python3 -m pip install chess
 2. python3 -m pip install chess.svg
 
-We also used Chessboard.js, a free-to-use resource that allows easy implementation of interactive chess boards embedded into websites through JavaScript. In order to download and use Chessboard.js, we went to chessboardjs.com and downloaded the latest version of the code. To use the Chessboard.js resource, we made copies of the JS, CSS，and image files (in the static/pieces/ folder) in our static/ folder so they are easily accesible. The license for usage is also inside the static/ folder as LICENSE.md. Thus, there is no further need to install any additional resources to run our project, since the files are inside the static/ folder.
+We also used Chessboard.js, a free-to-use resource that allows easy implementation of interactive chess boards embedded into websites through JavaScript. In order to download and use Chessboard.js, we went to chessboardjs.com and downloaded the latest version of the code. To use the Chessboard.js resource, we made copies of the JS, CSS，and image files (in the img/ folder) in our static/chessboardjs/ folder so they are easily accesible. The license for usage is also inside the chessboardjs/ folder as LICENSE.md. Thus, there is no further need to install any additional resources to run our project, since all the required files are inside the static/ folder.
 
 To run the program, use "flask run" in the terminal, and enter the server.
 
 Note: to collaborate on the project, we used VS Code and GitHub, so we also had to install some of the libraries pre-installed on the CS50 codespace, such as the cs50 library itself to use the SQL functionality, into our VS Code Desktop version.
 
-Note: we are using Python 3.11.5. At the beginning we were having trouble collaborating since the VS Code of Daniel did not recognize the "flask run" or "pip" commands, but after installing Python 3.11.5 to his computer, all the issues were solved.
+Additional Note: we are using Python 3.11.5. At the beginning we were having trouble collaborating since the VS Code of Daniel did not recognize the "flask run" or "pip" commands, but after installing Python 3.11.5 to his computer, all the issues were solved.
 
 After registering a new user and logging in, you can then proceed to use all the subpages freely.
 
@@ -34,7 +34,7 @@ Aside from the long_required and apology functions, which we borrowed from the f
 
 ### static/
 
-Inside the static folder, we have our style.css file, which contains all the styling we did to our website so that it looks more appealing. We also have the JavaScript files that some our sites needed for interactive chess boards, buttons, and other functionalities. Inside the pieces/ folder, we have png images of each chess piece for the interactive boards in the simulation site.
+Inside the static folder, we have our style.css file, which contains all the styling we did to our website so that it looks more appealing. We also have the JavaScript files that some our sites needed for interactive chess boards, buttons, and other functionalities. Inside the pieces/ folder, we have png images of each chess piece for the interactive boards in the simulation site. We also have a js/ folder where we have the individual JS code for the interactive sidebar menu and boards in the simulations and openings pages. The functions used in the JS files for the interactive boards are defined in the chessboard.js code.
 
 ### templates/
 
