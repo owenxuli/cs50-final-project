@@ -33,14 +33,9 @@
     <div style="margin-top: 50px;"></div>
 
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
         <button class="tablinks" onclick="openCity(event, 'Sicilian Defense')">Sicilian Defense</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-      </div>
-      
-      <div id="London" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
+        <button class="tablinks" onclick="openCity(event, 'Ruy López')">Ruy López</button>
+        <button class="tablinks" onclick="openCity(event, 'Italian Game')">Italian Game</button>
       </div>
       
       <div id="Sicilian Defense" class="tabcontent">
@@ -53,11 +48,30 @@
             </div>
         </div>
       </div>
-      
-      <div id="Tokyo" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
+
+      <div id="Ruy López" class="tabcontent">
+        <div class="content-container">
+            <p class="openings-left">{{ rl_board|safe }}</p>
+            <div class="text-right-container">
+                <p class="text-left">Move Order</p>
+                <p class="text-left">Pros vs. Cons</p>
+                <p class="text-left">Chess Masters Who Play This Opening</p>
+            </div>
+        </div>
       </div>
+
+      <div id="Italian Game" class="tabcontent">
+        <div class="content-container">
+            <p class="openings-left">{{ sd_board|safe }}</p>
+            <div class="text-right-container">
+                <p class="text-left">Move Order</p>
+                <p class="text-left">Pros vs. Cons</p>
+                <p class="text-left">Chess Masters Who Play This Opening</p>
+            </div>
+        </div>
+      </div>
+      
+
       
     <!--
     <div style="margin-right: 70px;"></div>
