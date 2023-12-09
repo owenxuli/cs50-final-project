@@ -5,45 +5,52 @@
 {% endblock %}
 
 {% block main %}
-<script>
-    $(document).ready(function () {
-        var board = Chessboard('myBoard', {
-            draggable: true,
-            dropOffBoard: 'trash',
-            sparePieces: true
-        });
 
-        var moveCounter = 0;
-        var maxMoves = 10;  // Set the maximum number of moves
+<body>
 
-        function onDragStart (source, piece, position, orientation) {
-            // Only allow dragging if the maximum moves haven't been reached
-            return moveCounter < maxMoves;
-        }
+    <div id="board1" style="width: 400px"></div>
 
-        function onDrop (source, target) {
-            // Increment move counter after each move
-            moveCounter++;
+    <script src="/static/chessboard-1.0.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            var board = Chessboard('myBoard', {
+                draggable: true,
+                dropOffBoard: 'trash',
+                sparePieces: true
+            });
 
-            // Update the board position after each move
-            board.position(board.fen());
+            var moveCounter = 0;
+            var maxMoves = 10;  // Set the maximum number of moves
 
-            // Check if the maximum moves have been reached
-            if (moveCounter >= maxMoves) {
-                alert('Maximum moves reached!');
+            function onDragStart (source, piece, position, orientation) {
+                // Only allow dragging if the maximum moves haven't been reached
+                return moveCounter < maxMoves;
             }
-        }
 
-        var config = {
-            draggable: true,
-            dropOffBoard: 'trash',
-            sparePieces: true,
-            onDragStart: onDragStart,
-            onDrop: onDrop
-        };
+            function onDrop (source, target) {
+                // Increment move counter after each move
+                moveCounter++;
 
-        board = Chessboard('myBoard', config);
-    });
-</script>
+                // Update the board position after each move
+                board.position(board.fen());
+
+                // Check if the maximum moves have been reached
+                if (moveCounter >= maxMoves) {
+                    alert('Maximum moves reached!');
+                }
+            }
+
+            var config = {
+                draggable: true,
+                dropOffBoard: 'trash',
+                sparePieces: true,
+                onDragStart: onDragStart,
+                onDrop: onDrop
+            };
+
+            board = Chessboard('myBoard', config);
+        });
+    </script>  
+</body>
 
 {% endblock %}
