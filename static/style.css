@@ -142,4 +142,6 @@ li2 {
 
 .mb-3 {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
