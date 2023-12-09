@@ -139,3 +139,7 @@ li2 {
     text-align: left;
     max-width: 800px;
 }
+
+.mb-3 {
+    display: flex;
+}
