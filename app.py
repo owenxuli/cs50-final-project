@@ -48,6 +48,7 @@ def homepage():
 @app.route("/notation")
 @login_required
 def notation():
+    # this function is defined in helpers.py
     squares = generate_board()
     
     return render_template('notation.html', squares=squares, board=board)
