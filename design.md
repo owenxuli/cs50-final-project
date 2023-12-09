@@ -31,6 +31,8 @@ In this site, we give an overview of the chess rules. Through the use of boards 
 
 ## layout.html 
 
+The layout page provides the format used by all of our html pages. This mainly concerns the top tabs on each page that can take the user to their corresponding page upon being clicked. The other functions inlcude making the page compatible with mobile devices, utilizing boostrap to format the tables such as the one in homepage.html to look clean, and format the title with body sections. 
+
 ## apology.html
 
 Similar to the apology.html we utilized in the finance pset. We changed the picture from the cat to a picture of the previous World Champion, Magnus Carlsen. 
