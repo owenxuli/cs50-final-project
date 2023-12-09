@@ -8,35 +8,118 @@
 
 <body>
     
-    <div class="midboard">
-        <div id="board1" name="board1" style="width: 800px"></div>
-        <div id="message"></div>
-    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'SicilianDefense')">Sicilian Defense</button>
+        <button class="tablinks" onclick="openCity(event, 'RuyLópez')">Ruy López</button>
+        <button class="tablinks" onclick="openCity(event, 'ItalianGame')">Italian Game</button>
+        <button class="tablinks" onclick="openCity(event, 'CaroKannDefense')">Caro-Kann Defense</button>
+        <button class="tablinks" onclick="openCity(event, 'QueensGambit')">Queen's Gambit</button>
+      </div>
+      
+      <div id="SicilianDefense" class="tabcontent">
+        <div>
+            <div class="midboard">
+                <div id="board1" name="board1" style="width: 800px"></div>
+                <div id="message"></div>
+            </div>
+    
+            <button id="1move1">e2e4</button>
+            <button id="1move2">c7c5</button>
+            <button id="1startPosition">Start Position</button>
+        </div>
+      </div>
 
-    <button id="move1Btn">e2-e4</button>
-    <button id="move2Btn">d2-d4, g8-f6</button>
-    <button id="startPositionBtn">Start Position</button>
+      <div id="RuyLópez" class="tabcontent">
+        <div>
+            <div class="midboard">
+                <div id="board2" name="board2" style="width: 800px"></div>
+                <div id="message"></div>
+            </div>
+    
+            <button id="2move1">e2e4</button>
+            <button id="2move2">e7e5</button>
+            <button id="2move3">Ng1f3</button>
+            <button id="2move4">nb8c6</button>
+            <button id="2move5">Bf1b5</button>
+            <button id="2startPosition">Start Position</button>
+        </div>
+      </div>
 
+      <div id="ItalianGame" class="tabcontent">
+        <div>
+            <div class="midboard">
+                <div id="board3" name="board3" style="width: 800px"></div>
+                <div id="message"></div>
+            </div>
+    
+            <button id="move1Btn">e2-e4</button>
+            <button id="move2Btn">d2-d4, g8-f6</button>
+            <button id="startPositionBtn">Start Position</button>
+        </div>
+      </div>
+
+      <div id="CaroKannDefense" class="tabcontent">
+        <div>
+            <div class="midboard">
+                <div id="board4" name="board4" style="width: 800px"></div>
+                <div id="message"></div>
+            </div>
+    
+            <button id="move1Btn">e2-e4</button>
+            <button id="move2Btn">d2-d4, g8-f6</button>
+            <button id="startPositionBtn">Start Position</button>
+        </div>
+      </div>
+
+      <div id="QueensGambit" class="tabcontent">
+        <div>
+            <div class="midboard">
+                <div id="board5" name="board5" style="width: 800px"></div>
+                <div id="message"></div>
+            </div>
+    
+            <button id="move1Btn">e2-e4</button>
+            <button id="move2Btn">d2-d4, g8-f6</button>
+            <button id="startPositionBtn">Start Position</button>
+        </div>
+      </div>
+
+
+    <!-- this script allows interactive board without the need to keep refreshing the page -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- this is the chessboard.js file that allows us to create interactive chess boards -->
     <script src="/static/chessboardjs/chessboard-1.0.0.js"></script>
 
+    <!-- each of these scripts is for each of the different opening simulations -->
+    <script src="/static/js/board1.js"></script>
+    <script src="/static/js/board2.js"></script>
+    <script src="/static/js/board3.js"></script>
+    <script src="/static/js/board4.js"></script>
+    <script src="/static/js/board5.js"></script>
+
     <script>
-        $(document).ready(function () {
-            var board1 = Chessboard('board1', {
-                position: 'start',
-            
-            });
-        $('#move1Btn').on('click', function () {
-        board1.move('e2-e4')
-        })
-
-        $('#move2Btn').on('click', function () {
-        board1.move('d2-d4', 'g8-f6')
-        })
-
-        $('#startPositionBtn').on('click', board1.start)
-        });
-    </script>
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+          
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+          
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+          
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+      </script>
 </body>
 
 {% endblock %}
