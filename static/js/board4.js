@@ -3,13 +3,13 @@ $(document).ready(function () {
         position: 'start',
     
     });
-$('#move1Btn').on('click', function () {
+$('#4move1').on('click', function () {
 board4.move('e2-e4')
 })
 
-$('#move2Btn').on('click', function () {
-board4.move('d2-d4', 'g8-f6')
+$('#4move2').on('click', function () {
+board4.move('c7-c6')
 })
 
-$('#startPositionBtn').on('click', board4.start)
+$('#4startPosition').on('click', board4.start)
 });
