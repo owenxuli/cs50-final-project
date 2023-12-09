@@ -7,13 +7,6 @@
 {% block main %}
     <h1>EnPeassant</h1>
 
-    <style>
-        body {
-            background-image: url('/static/chess2.jpg');
-            background-color: #e0e0e0;
-        }
-    </style>
-
     <body>
 
         By Owen Xu and Daniel Zhang
@@ -62,6 +55,30 @@
 
         </table>
     </div>
+
+    <div style="margin-top: 50px;"></div>
+    
+    <div class="midboard">
+        <div id="homeboard" name="homeboard" style="width: 600px"></div>
+        <div id="message"></div>
+    </div>
+
+    <button id="startPositionBtn">Restart</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/static/chessboardjs/chessboard-1.0.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var homeboard = Chessboard('homeboard', {
+                position: 'start',
+                draggable: true,
+                dropOffBoard: 'trash',
+            });
+
+        $('#startPositionBtn').on('click', homeboard.start)
+        });
+    </script>
 
     </body>
 
