@@ -9,11 +9,11 @@
 <body>
     
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'SicilianDefense')">Sicilian Defense</button>
-        <button class="tablinks" onclick="openCity(event, 'RuyLópez')">Ruy López</button>
-        <button class="tablinks" onclick="openCity(event, 'ItalianGame')">Italian Game</button>
-        <button class="tablinks" onclick="openCity(event, 'CaroKannDefense')">Caro-Kann Defense</button>
-        <button class="tablinks" onclick="openCity(event, 'QueensGambit')">Queen's Gambit</button>
+        <button class="tablinks" onclick="openOpening(event, 'SicilianDefense')">Sicilian Defense</button>
+        <button class="tablinks" onclick="openOpening(event, 'RuyLópez')">Ruy López</button>
+        <button class="tablinks" onclick="openOpening(event, 'ItalianGame')">Italian Game</button>
+        <button class="tablinks" onclick="openOpening(event, 'CaroKannDefense')">Caro-Kann Defense</button>
+        <button class="tablinks" onclick="openOpening(event, 'QueensGambit')">Queen's Gambit</button>
       </div>
       
       <div id="SicilianDefense" class="tabcontent">
@@ -94,6 +94,9 @@
     <!-- this is the chessboard.js file that allows us to create interactive chess boards -->
     <script src="/static/chessboardjs/chessboard-1.0.0.js"></script>
 
+    <!-- we made a helper function in this JS file to create a sidebar menu to change between openings -->
+    <script src="/static/js/openings.js"></script>
+
     <!-- each of these scripts is for each of the different opening simulations -->
     <script src="/static/js/board1.js"></script>
     <script src="/static/js/board2.js"></script>
@@ -101,28 +104,6 @@
     <script src="/static/js/board4.js"></script>
     <script src="/static/js/board5.js"></script>
 
-    <script>
-        function openCity(evt, cityName) {
-            // Declare all variables
-            var i, tabcontent, tablinks;
-          
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-              tabcontent[i].style.display = "none";
-            }
-          
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-              tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-          
-            // Show the current tab, and add an "active" class to the link that opened the tab
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-          }
-      </script>
 </body>
 
 {% endblock %}
