@@ -10,11 +10,11 @@ We used two Python libraries: chess, and chess.svg. So the first step is to impo
 1. python3 -m pip install chess
 2. python3 -m pip install chess.svg
 
-We also used Chessboard.js, a free-to-use resource that allows easy implementation of interactive chess boards embedded into websites through JavaScript. In order to download and use Chessboard.js. The folder containing the downloaded files are inside the chessboardjs-1.0.0 folder, including the license for the usage of the code. To use the Chessboard.js resource, we made copies of the JS, CSS，and image files (in the static/pieces/ folder) in our static/ folder so they are easily accesible.
+We also used Chessboard.js, a free-to-use resource that allows easy implementation of interactive chess boards embedded into websites through JavaScript. In order to download and use Chessboard.js. The folder containing the downloaded files are inside the chessboardjs-1.0.0/ folder, including the license for the usage of the code. To use the Chessboard.js resource, we made copies of the JS, CSS，and image files (in the static/pieces/ folder) in our static/ folder so they are easily accesible. Thus, there is no further need to install any additional resources to run our project, since the files are inside the static/ folder.
 
 To run the program, use "flask run" in the terminal, and enter the server.
 
-Note: to collaborate on the project, we used VS Code and GitHub, so we also had to install some of the libraries pre-installed on the CS50 codespace, such as the cs50 library itself to use the SQL functionality, into our VS Code.
+Note: to collaborate on the project, we used VS Code and GitHub, so we also had to install some of the libraries pre-installed on the CS50 codespace, such as the cs50 library itself to use the SQL functionality, into our VS Code Desktop version.
 
 After registering a new user and logging in, you can then proceed to use all the subpages freely.
 
