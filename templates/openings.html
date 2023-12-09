@@ -32,32 +32,33 @@
 
     <div style="margin-top: 50px;"></div>
 
-    <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'Sicilian Defense')">Sicilian Defense</button>
-        <button class="tablinks" onclick="openCity(event, 'Ruy López')">Ruy López</button>
-        <button class="tablinks" onclick="openCity(event, 'Italian Game')">Italian Game</button>
-        <button class="tablinks" onclick="openCity(event, 'Caro-Kann Defense')">Caro-Kann Defense</button>
-        <button class="tablinks" onclick="openCity(event, 'Queen's Gambit')">Queen's Gambit</button>
+    <div class="sidenav">
+        <a href="#">Sicilian Defense</a>
+        <a href="#">Ruy López</a>
+        <a href="#">Italian Game</a>
+        <a href="#">Caro-Kann Defense</a>
+        <a href="#">Queen's Gambit</a>
+      </div>
+      
+      <!-- Page content -->
+      <div class="main">
+        ...
       </div>
 
-        <div style="margin-right: 70px;"></div>
+    <div style="margin-right: 70px;"></div>
+      
+      <!-- Page content -->
+      <div class="main">
+        ...
+      </div>
 
-        <!--<div class="board-center">
-            <small class="board-right">
-                {{ sd_board|safe }}
-            </small>
+    <div id="Sicilian Defense">
+        <div class="chessboard board-right">
+            {{ sd_board|safe }}
         </div>
-    -->
-
-        <div id="Sicilian Defense">
-            <p class="board-center">
-                <small class="board-right">
-                    {{ sd_board|safe }}
-                </small>
-            <p>Move Order</p>
-            <p>Pros vs. Cons</p>
-            <p>Chess Masters Who Play This Opening</p>
-        </div>
+        <p>Move Order</p>
+        <p>Pros vs. Cons</p>
+        <p>Chess Masters Who Play This Opening</p>
     </div> 
       
     <div id="Ruy López" class="tabcontent">
@@ -78,7 +79,7 @@
         <p>Chess Masters Who Play This Opening</p>
     </div>
 
-    <div id="ueen's Gambit" class="tabcontent">
+    <div id="Queen's Gambit" class="tabcontent">
         <p>Move Order</p>
         <p>Pros vs. Cons</p>
         <p>Chess Masters Who Play This Opening</p>
