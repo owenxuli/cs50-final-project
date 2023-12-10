@@ -39,3 +39,7 @@ Inside the static folder, we have our style.css file, which contains all the sty
 ### templates/
 
 Inside the templates folder, we have every html file that we created for our project. The most important ones are notation.html, answer.html, openings.html, and simulations.html. In notation.html, you can find a basic tutorial on how standard chess notation is used to describe the movement of a piece from one square to another, and the symbol and names for each piece and each square in the board. This site will then allow you to go to answer.html, which is a basic practice of the chess notation, with 3 forms to be submitted, and each form describing the movement of a specific piece in the board. 
+
+### Link to our video
+
+https://youtu.be/JJqDmGIo2Ps?feature=shared
