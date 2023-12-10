@@ -1,8 +1,12 @@
+// follows the same logic as the board1.js functions.
+// notice that the ids for the buttons are different for every board; otherwise they would be the same board with the same buttons
+
 $(document).ready(function () {
     var board2 = Chessboard('board2', {
         position: 'start',
     
     });
+
 $('#2move1').on('click', function () {
     board2.move('e2-e4')
 })

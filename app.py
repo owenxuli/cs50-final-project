@@ -91,7 +91,7 @@ def answer():
 @app.route("/openings")
 @login_required
 def openings():
-    
+    # we generate a board for the final position of every opening that we describe.
     sd_board = chess.Board("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR")
     svg_sd_board = chess.svg.board(board = sd_board, size = 400)
     
@@ -114,6 +114,7 @@ def openings():
 @app.route("/rules")
 @login_required
 def rules():
+        # we generate the following boards to show the positions that are described in the rules.html page
         board = chess.Board("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
         svg_board = chess.svg.board(board = board, size = 400)
         

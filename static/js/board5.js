@@ -3,6 +3,7 @@ $(document).ready(function () {
         position: 'start',
     
     });
+    
 $('#5move1').on('click', function () {
 board5.move('d2-d4')
 })
