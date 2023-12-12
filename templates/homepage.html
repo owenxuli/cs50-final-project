@@ -11,74 +11,74 @@
 
         By Owen Xu and Daniel Zhang
 
-    <div style="margin-top: 20px;"></div>
-    
-    <div class="center-container">
-        <table class="table table-bordered table-hover">
-            <thead>
+        <div style="margin-top: 20px;"></div>
+
+        <div class="center-container">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Opening Name</th>
+                        <th scope="col">Starting Color</th>
+                        <th scope="col">Number of Main Variations</th>
+                    </tr>
+                </thead>
+
                 <tr>
-                    <th scope="col">Opening Name</th>
-                    <th scope="col">Starting Color</th>
-                    <th scope="col">Number of Main Variations</th>
+                    <td><a class="not-bold" href="https://en.wikipedia.org/wiki/Sicilian_Defence">Sicilian Defense</a></th>
+                    <td class="not-bold">Black</th>
+                    <td class="not-bold">6</th>
                 </tr>
-            </thead>
 
-            <tr>
-                <td><a class="not-bold" href="https://en.wikipedia.org/wiki/Sicilian_Defence">Sicilian Defense</a></th>
-                <td class="not-bold">Black</th>
-                <td class="not-bold">6</th>
-            </tr>
+                <tr>
+                    <td><a class="not-bold" href="https://en.wikipedia.org/wiki/Ruy_Lopez">Ruy López</a></th>
+                    <td class="not-bold">White</th>
+                    <td class="not-bold">7</th>
+                </tr>
 
-            <tr>
-                <td><a class="not-bold" href="https://en.wikipedia.org/wiki/Ruy_Lopez">Ruy López</a></th>
-                <td class="not-bold">White</th>
-                <td class="not-bold">7</th>
-            </tr>
+                <tr>
+                    <td><a class="not-bold" href="https://en.wikipedia.org/wiki/Italian_Game">Italian Game</a></th>
+                    <td class="not-bold">White</th>
+                    <td class="not-bold">3</th>
+                </tr>
 
-            <tr>
-                <td><a class="not-bold" href="https://en.wikipedia.org/wiki/Italian_Game">Italian Game</a></th>
-                <td class="not-bold">White</th>
-                <td class="not-bold">3</th>
-            </tr>
+                <tr>
+                    <td><a class="not-bold" href="https://en.wikipedia.org/wiki/Caro%E2%80%93Kann_Defence">Caro-Kann Defense</a></th>
+                    <td class="not-bold">Black</th>
+                    <td class="not-bold">7</th>
+                </tr>
 
-            <tr>
-                <td><a class="not-bold" href="https://en.wikipedia.org/wiki/Caro%E2%80%93Kann_Defence">Caro-Kann Defense</a></th>
-                <td class="not-bold">Black</th>
-                <td class="not-bold">7</th>
-            </tr>
+                <tr>
+                    <td><a class="not-bold" href="https://en.wikipedia.org/wiki/Queen%27s_Gambit">Queen's Gambit</a></th>
+                    <td class="not-bold">White</th>
+                    <td class="not-bold">3</th>
+                </tr>
 
-            <tr>
-                <td><a class="not-bold" href="https://en.wikipedia.org/wiki/Queen%27s_Gambit">Queen's Gambit</a></th>
-                <td class="not-bold">White</th>
-                <td class="not-bold">3</th>
-            </tr>
+            </table>
+        </div>
 
-        </table>
-    </div>
+        <div style="margin-top: 50px;"></div>
 
-    <div style="margin-top: 50px;"></div>
-    
-    <div class="midboard">
-        <div id="homeboard" name="homeboard" style="width: 600px"></div>
-        <div id="message"></div>
-    </div>
+        <div class="midboard">
+            <div id="homeboard" name="homeboard" style="width: 600px"></div>
+            <div id="message"></div>
+        </div>
 
-    <button id="startPositionBtn">Restart</button>
+        <button id="startPositionBtn">Restart</button>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/static/chessboardjs/chessboard-1.0.0.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="/static/chessboardjs/chessboard-1.0.0.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            var homeboard = Chessboard('homeboard', {
-                position: 'start',
-                draggable: true,
-                dropOffBoard: 'trash',
+        <script>
+            $(document).ready(function() {
+                var homeboard = Chessboard('homeboard', {
+                    position: 'start',
+                    draggable: true,
+                    dropOffBoard: 'trash',
+                });
+
+                $('#startPositionBtn').on('click', homeboard.start)
             });
-
-        $('#startPositionBtn').on('click', homeboard.start)
-        });
-    </script>
+        </script>
 
     </body>
 

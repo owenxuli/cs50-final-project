@@ -4,6 +4,7 @@ import chess.svg
 from flask import redirect, render_template, session
 from functools import wraps
 
+
 # this function will generate a chess board
 def generate_board():
     board = chess.Board()
@@ -27,6 +28,7 @@ def generate_board():
             squares.append({"name": square_name, "piece": piece_symbol, "color": color})
 
     return squares
+
 
 def apology(message, code=400):
     """Render message as an apology to user."""

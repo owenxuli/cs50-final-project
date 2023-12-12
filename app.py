@@ -24,6 +24,7 @@ db2 = SQL("sqlite:///openings.db")
 # a global variable for the chess board
 board = chess.Board()
 
+
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -33,23 +34,25 @@ def after_request(response):
     return response
 
 
-
 @app.route("/")
 @login_required
 def homepage():
-    name = db2.execute ("SELECT name FROM openings")
-    color = db2.execute ("SELECT color FROM openings")
-    variations = db2.execute ("SELECT variations FROM openings")
-    return render_template("homepage.html", name = name, color = color, variations = variations)
+    name = db2.execute("SELECT name FROM openings")
+    color = db2.execute("SELECT color FROM openings")
+    variations = db2.execute("SELECT variations FROM openings")
+    return render_template(
+        "homepage.html", name=name, color=color, variations=variations
+    )
 
 
-#TO-DO
+# TO-DO
 @app.route("/notation")
 @login_required
 def notation():
     # this function is defined in helpers.py
     squares = generate_board()
-    return render_template('notation.html', squares=squares, board=board)
+    return render_template("notation.html", squares=squares, board=board)
+
 
 @app.route("/answer", methods=["GET", "POST"])
 @login_required
@@ -63,7 +66,6 @@ def answer():
     svg_board = chess.svg.board(board=board, size=800)
 
     if request.method == "POST":
-
         # get the answers from the user
         answer1 = request.form.get("answer1")
         answer2 = request.form.get("answer2")
@@ -72,59 +74,73 @@ def answer():
         correct_answer1 = "rd8d6"
         correct_answer2 = "Ra1f1"
         correct_answer3 = "Qh4g5"
-        
+
         # check if the user answered all notations
         if not answer1 or not answer2 or not answer3:
             flash("Please respond all questions.")
 
         # check if the answers are correct
-        if answer1 == correct_answer1 and answer2 == correct_answer2 and answer3 == correct_answer3:
+        if (
+            answer1 == correct_answer1
+            and answer2 == correct_answer2
+            and answer3 == correct_answer3
+        ):
             flash("Correct!")
         else:
             flash("Incorrect. Please try again.")
-        
+
         return render_template("answer.html", svg_board=svg_board)
     else:
         return render_template("answer.html", svg_board=svg_board)
-        
-#TO-DO
+
+
+# TO-DO
 @app.route("/openings")
 @login_required
 def openings():
     # we generate a board for the final position of every opening that we describe.
     sd_board = chess.Board("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR")
-    svg_sd_board = chess.svg.board(board = sd_board, size = 400)
-    
+    svg_sd_board = chess.svg.board(board=sd_board, size=400)
+
     rl_board = chess.Board("r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R")
-    svg_rl_board = chess.svg.board(board = rl_board, size = 400)
-    
+    svg_rl_board = chess.svg.board(board=rl_board, size=400)
+
     ig_board = chess.Board("r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R")
-    svg_ig_board = chess.svg.board(board = ig_board, size = 400)
-    
+    svg_ig_board = chess.svg.board(board=ig_board, size=400)
+
     ck_board = chess.Board("rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR")
-    svg_ck_board = chess.svg.board(board = ck_board, size = 400)
-    
+    svg_ck_board = chess.svg.board(board=ck_board, size=400)
+
     qg_board = chess.Board("rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR")
-    svg_qg_board = chess.svg.board(board = qg_board, size = 400)
-    
-    return render_template("openings.html", sd_board = svg_sd_board, rl_board = svg_rl_board, ig_board = svg_ig_board, ck_board = svg_ck_board, qg_board = svg_qg_board)
+    svg_qg_board = chess.svg.board(board=qg_board, size=400)
+
+    return render_template(
+        "openings.html",
+        sd_board=svg_sd_board,
+        rl_board=svg_rl_board,
+        ig_board=svg_ig_board,
+        ck_board=svg_ck_board,
+        qg_board=svg_qg_board,
+    )
 
 
-#TO-DO
+# TO-DO
 @app.route("/rules")
 @login_required
 def rules():
-        # we generate the following boards to show the positions that are described in the rules.html page
-        board = chess.Board("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
-        svg_board = chess.svg.board(board = board, size = 400)
-        
-        checkmate = chess.Board("4k3/8/8/7r/8/8/5PP1/5RKq")
-        svg_checkmate = chess.svg.board(board = checkmate, size = 400)
-        
-        draws = chess.Board("2k5/8/8/3QB3/8/4K3/8/8")
-        svg_draws = chess.svg.board(board = draws, size = 400)
-        
-        return render_template("rules.html", board = svg_board, checkmate = svg_checkmate, draws = svg_draws)
+    # we generate the following boards to show the positions that are described in the rules.html page
+    board = chess.Board("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
+    svg_board = chess.svg.board(board=board, size=400)
+
+    checkmate = chess.Board("4k3/8/8/7r/8/8/5PP1/5RKq")
+    svg_checkmate = chess.svg.board(board=checkmate, size=400)
+
+    draws = chess.Board("2k5/8/8/3QB3/8/4K3/8/8")
+    svg_draws = chess.svg.board(board=draws, size=400)
+
+    return render_template(
+        "rules.html", board=svg_board, checkmate=svg_checkmate, draws=svg_draws
+    )
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -237,8 +253,7 @@ def register():
     # if the request method is GET, then enter register.html
     else:
         return render_template("register.html")
-    
-    
+
 
 @app.route("/simulations")
 @login_required

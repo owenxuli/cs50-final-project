@@ -6,105 +6,105 @@
 
 {% block main %}
 
-<body>
-    
-    <div class="tab">
-        <button class="tablinks" onclick="openOpening(event, 'SicilianDefense')">Sicilian Defense</button>
-        <button class="tablinks" onclick="openOpening(event, 'RuyLópez')">Ruy López</button>
-        <button class="tablinks" onclick="openOpening(event, 'ItalianGame')">Italian Game</button>
-        <button class="tablinks" onclick="openOpening(event, 'CaroKannDefense')">Caro-Kann Defense</button>
-        <button class="tablinks" onclick="openOpening(event, 'QueensGambit')">Queen's Gambit</button>
-      </div>
-      
-      <div id="SicilianDefense" class="tabcontent">
-        <div>
-            <div class="midboard">
-                <div id="board1" name="board1" style="width: 800px"></div>
-                <div id="message"></div>
-            </div>
-    
-            <button id="1move1">e2e4</button>
-            <button id="1move2">c7c5</button>
-            <button id="1startPosition">Start Position</button>
-        </div>
-      </div>
+    <body>
 
-      <div id="RuyLópez" class="tabcontent">
-        <div>
-            <div class="midboard">
-                <div id="board2" name="board2" style="width: 800px"></div>
-                <div id="message"></div>
-            </div>
-    
-            <button id="2move1">e2e4</button>
-            <button id="2move2">e7e5</button>
-            <button id="2move3">Ng1f3</button>
-            <button id="2move4">nb8c6</button>
-            <button id="2move5">Bf1b5</button>
-            <button id="2startPosition">Start Position</button>
+        <div class="tab">
+            <button class="tablinks" onclick="openOpening(event, 'SicilianDefense')">Sicilian Defense</button>
+            <button class="tablinks" onclick="openOpening(event, 'RuyLópez')">Ruy López</button>
+            <button class="tablinks" onclick="openOpening(event, 'ItalianGame')">Italian Game</button>
+            <button class="tablinks" onclick="openOpening(event, 'CaroKannDefense')">Caro-Kann Defense</button>
+            <button class="tablinks" onclick="openOpening(event, 'QueensGambit')">Queen's Gambit</button>
         </div>
-      </div>
 
-      <div id="ItalianGame" class="tabcontent">
-        <div>
-            <div class="midboard">
-                <div id="board3" name="board3" style="width: 800px"></div>
-                <div id="message"></div>
-            </div>
-    
-            <button id="3move1">e2e4</button>
-            <button id="3move2">e7e5</button>
-            <button id="3move3">Ng1f3</button>
-            <button id="3move4">nb8c6</button>
-            <button id="3move5">Bf1c4</button>
-            <button id="3startPosition">Start Position</button>
-        </div>
-      </div>
+        <div id="SicilianDefense" class="tabcontent">
+            <div>
+                <div class="midboard">
+                    <div id="board1" name="board1" style="width: 800px"></div>
+                    <div id="message"></div>
+                </div>
 
-      <div id="CaroKannDefense" class="tabcontent">
-        <div>
-            <div class="midboard">
-                <div id="board4" name="board4" style="width: 800px"></div>
-                <div id="message"></div>
+                <button id="1move1">e2e4</button>
+                <button id="1move2">c7c5</button>
+                <button id="1startPosition">Start Position</button>
             </div>
-    
-            <button id="4move1">e2e4</button>
-            <button id="4move2">c7c6</button>
-            <button id="4startPosition">Start Position</button>
         </div>
-      </div>
 
-      <div id="QueensGambit" class="tabcontent">
-        <div>
-            <div class="midboard">
-                <div id="board5" name="board5" style="width: 800px"></div>
-                <div id="message"></div>
+        <div id="RuyLópez" class="tabcontent">
+            <div>
+                <div class="midboard">
+                    <div id="board2" name="board2" style="width: 800px"></div>
+                    <div id="message"></div>
+                </div>
+
+                <button id="2move1">e2e4</button>
+                <button id="2move2">e7e5</button>
+                <button id="2move3">Ng1f3</button>
+                <button id="2move4">nb8c6</button>
+                <button id="2move5">Bf1b5</button>
+                <button id="2startPosition">Start Position</button>
             </div>
-    
-            <button id="5move1">d2d4</button>
-            <button id="5move2">d7d5</button>
-            <button id="5move3">c2c4</button>
-            <button id="5startPosition">Start Position</button>
         </div>
-      </div>
+
+        <div id="ItalianGame" class="tabcontent">
+            <div>
+                <div class="midboard">
+                    <div id="board3" name="board3" style="width: 800px"></div>
+                    <div id="message"></div>
+                </div>
+
+                <button id="3move1">e2e4</button>
+                <button id="3move2">e7e5</button>
+                <button id="3move3">Ng1f3</button>
+                <button id="3move4">nb8c6</button>
+                <button id="3move5">Bf1c4</button>
+                <button id="3startPosition">Start Position</button>
+            </div>
+        </div>
+
+        <div id="CaroKannDefense" class="tabcontent">
+            <div>
+                <div class="midboard">
+                    <div id="board4" name="board4" style="width: 800px"></div>
+                    <div id="message"></div>
+                </div>
+
+                <button id="4move1">e2e4</button>
+                <button id="4move2">c7c6</button>
+                <button id="4startPosition">Start Position</button>
+            </div>
+        </div>
+
+        <div id="QueensGambit" class="tabcontent">
+            <div>
+                <div class="midboard">
+                    <div id="board5" name="board5" style="width: 800px"></div>
+                    <div id="message"></div>
+                </div>
+
+                <button id="5move1">d2d4</button>
+                <button id="5move2">d7d5</button>
+                <button id="5move3">c2c4</button>
+                <button id="5startPosition">Start Position</button>
+            </div>
+        </div>
 
 
     <!-- this script allows interactive board without the need to keep refreshing the page -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <!-- this is the chessboard.js file that allows us to create interactive chess boards -->
-    <script src="/static/chessboardjs/chessboard-1.0.0.js"></script>
+        <script src="/static/chessboardjs/chessboard-1.0.0.js"></script>
 
     <!-- we made a helper function in this JS file to create a sidebar menu to change between openings -->
-    <script src="/static/js/openings.js"></script>
+        <script src="/static/js/openings.js"></script>
 
     <!-- each of these scripts is for each of the different opening simulations -->
-    <script src="/static/js/board1.js"></script>
-    <script src="/static/js/board2.js"></script>
-    <script src="/static/js/board3.js"></script>
-    <script src="/static/js/board4.js"></script>
-    <script src="/static/js/board5.js"></script>
+        <script src="/static/js/board1.js"></script>
+        <script src="/static/js/board2.js"></script>
+        <script src="/static/js/board3.js"></script>
+        <script src="/static/js/board4.js"></script>
+        <script src="/static/js/board5.js"></script>
 
-</body>
+    </body>
 
 {% endblock %}

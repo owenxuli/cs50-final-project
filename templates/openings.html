@@ -6,6 +6,7 @@
 
 {% block main %}
     <h1>Common Chess Openings</h1>
+
     <body>
 
         <div style="margin-top: 40px;"></div>
@@ -17,28 +18,28 @@
             <button class="tablinks" onclick="openOpening(event, 'CaroKannDefense')">Caro-Kann Defense</button>
             <button class="tablinks" onclick="openOpening(event, 'QueensGambit')">Queen's Gambit</button>
         </div>
-        
+
         <div id="SicilianDefense" class="tabcontent">
             <div class="content-container">
                 <p class="openings-left">{{ sd_board|safe }}</p>
                 <div class="text-right-container">
                     <p class="text-left"><b>Move Order:</b></p>
-                        <small class="text-left">e4 c5</small>
-                <div style="margin-top: 60px;"></div>
+                    <small class="text-left">e4 c5</small>
+                    <div style="margin-top: 60px;"></div>
                     <p class="text-left"><b>Pros vs. Cons:</b></p>
-                        <dl class="text-left">  
-                            <dt>Pros</dt>
-                                <dd>- Creates unbalanced games</dd>
-                                <dd>- Black has good attacking chances</dd>
-                                <dd>- It's an excellent opening to play when you need to win</dd>
-                            <dt>Cons</dt>
-                                <dd>- White has many ways to meet the Sicilian</dd>
-                                <dd>- White gets great attacking chances in the main variations</dd>
-                                <dd>- There is a lot of theory</dd>
-                        </dl>
-                <div style="margin-top: 60px;"></div>
+                    <dl class="text-left">
+                        <dt>Pros</dt>
+                        <dd>- Creates unbalanced games</dd>
+                        <dd>- Black has good attacking chances</dd>
+                        <dd>- It's an excellent opening to play when you need to win</dd>
+                        <dt>Cons</dt>
+                        <dd>- White has many ways to meet the Sicilian</dd>
+                        <dd>- White gets great attacking chances in the main variations</dd>
+                        <dd>- There is a lot of theory</dd>
+                    </dl>
+                    <div style="margin-top: 60px;"></div>
                     <p class="text-left"><b>Chess Masters Who Play This Opening:</b></p>
-                        <small class="text-left">Bobby Fischer, Garry Kasparov, Magnus Carlsen, Vladimir Kramnik</small>
+                    <small class="text-left">Bobby Fischer, Garry Kasparov, Magnus Carlsen, Vladimir Kramnik</small>
                 </div>
             </div>
         </div>
@@ -48,46 +49,47 @@
                 <p class="openings-left">{{ rl_board|safe }}</p>
                 <div class="text-right-container">
                     <p class="text-left"><b>Move Order:</b></p>
-                        <small class="text-left">e4 e5 Nf3 nc6 Bb5</small>
-                <div style="margin-top: 60px;"></div>
+                    <small class="text-left">e4 e5 Nf3 nc6 Bb5</small>
+                    <div style="margin-top: 60px;"></div>
                     <p class="text-left"><b>Pros vs. Cons:</b></p>
-                        <dl class="text-left">  
-                            <dt>Pros</dt>
-                                <dd>- It leads to very complex and multifaceted play</dd>
-                                <dd>- It tends to give White long-term pressure</dd>
-                                <dd>- White develops rapidly, and castles quickly</dd>
-                                <dd>- There are good lines for both tactical and positional players</dd>
-                            <dt>Cons</dt>
-                                <dd>- It's difficult to learn its extensive theory</dd>
-                                <dd>- Black has a vast number of defenses to choose from</dd>
-                        </dl>
-                <div style="margin-top: 60px;"></div>
+                    <dl class="text-left">
+                        <dt>Pros</dt>
+                        <dd>- It leads to very complex and multifaceted play</dd>
+                        <dd>- It tends to give White long-term pressure</dd>
+                        <dd>- White develops rapidly, and castles quickly</dd>
+                        <dd>- There are good lines for both tactical and positional players</dd>
+                        <dt>Cons</dt>
+                        <dd>- It's difficult to learn its extensive theory</dd>
+                        <dd>- Black has a vast number of defenses to choose from</dd>
+                    </dl>
+                    <div style="margin-top: 60px;"></div>
                     <p class="text-left"><b>Chess Masters Who Play This Opening:</b></p>
-                        <small class="text-left">Vladimir Kramnik, Garry Kasparov, Fabiano Caruana, Magnus Carlsen, Bobby Fischer</small>
+                    <small class="text-left">Vladimir Kramnik, Garry Kasparov, Fabiano Caruana, Magnus Carlsen, Bobby Fischer</small>
                 </div>
             </div>
         </div>
 
         <div id="ItalianGame" class="tabcontent">
-            <div class="content-container"><P></P>
+            <div class="content-container">
                 <p class="openings-left">{{ ig_board|safe }}</p>
                 <div class="text-right-container">
                     <p class="text-left"><b>Move Order:</b></p>
-                        <small class="text-left">e4 e5 Nf3 nc6 Bc4</small>
-                <div style="margin-top: 60px;"></div>
+                    <small class="text-left">e4 e5 Nf3 nc6 Bc4</small>
+                    <div style="margin-top: 60px;"></div>
                     <p class="text-left"><b>Pros vs. Cons:</b></p>
-                        <dl class="text-left">  
-                            <dt>Pros</dt>
-                                <dd>- Natural play</dd>
-                                <dd>- Focus on the center</dd>
-                                <dd>- Rapid development</dd>
-                            <dt>Cons</dt>
-                                <dd>- The bishop on c4 might be exposed</dd>
-                                <dd>- Black's center is not under immediate pressure</dd>
-                        </dl>
-                <div style="margin-top: 60px;"></div>
+                    <dl class="text-left">
+                        <dt>Pros</dt>
+                        <dd>- Natural play</dd>
+                        <dd>- Focus on the center</dd>
+                        <dd>- Rapid development</dd>
+                        <dt>Cons</dt>
+                        <dd>- The bishop on c4 might be exposed</dd>
+                        <dd>- Black's center is not under immediate pressure</dd>
+                        <dd>- Rarely played in high rated games</dd>
+                    </dl>
+                    <div style="margin-top: 60px;"></div>
                     <p class="text-left"><b>Chess Masters Who Play This Opening:</b></p>
-                        <small class="text-left">Fabiano Caruana, Magnus Carlsen, Vladimir Kramnik, Levon Aronian</small>
+                    <small class="text-left">Fabiano Caruana, Magnus Carlsen, Vladimir Kramnik, Levon Aronian</small>
                 </div>
             </div>
         </div>
@@ -97,22 +99,22 @@
                 <p class="openings-left">{{ ck_board|safe }}</p>
                 <div class="text-right-container">
                     <p class="text-left"><b>Move Order:</b></p>
-                        <small class="text-left">e4 c6</small>
-                <div style="margin-top: 60px;"></div>
+                    <small class="text-left">e4 c6</small>
+                    <div style="margin-top: 60px;"></div>
                     <p class="text-left"><b>Pros vs. Cons:</b></p>
-                        <dl class="text-left">  
-                            <dt>Pros</dt>
-                                <dd>- Sound pawn structure</dd>
-                                <dd>- Free light-squared bishop</dd>
-                                <dd>- Safe and solid</dd>
-                            <dt>Cons</dt>
-                                <dd>- Less space for black</dd>
-                                <dd>- Slower development</dd>
-                                <dd>- There are many different responses for White</dd>
-                        </dl>
-                <div style="margin-top: 60px;"></div>
+                    <dl class="text-left">
+                        <dt>Pros</dt>
+                        <dd>- Sound pawn structure</dd>
+                        <dd>- Free light-squared bishop</dd>
+                        <dd>- Safe and solid</dd>
+                        <dt>Cons</dt>
+                        <dd>- Less space for black</dd>
+                        <dd>- Slower development</dd>
+                        <dd>- There are many different responses for White</dd>
+                    </dl>
+                    <div style="margin-top: 60px;"></div>
                     <p class="text-left"><b>Chess Masters Who Play This Opening:</b></p>
-                        <small class="text-left">Anatoly Karpov, Hikaru Nakamura, Vladimir Kramnik, Viswanathan Anand</small>
+                    <small class="text-left">Anatoly Karpov, Hikaru Nakamura, Vladimir Kramnik, Viswanathan Anand</small>
                 </div>
             </div>
         </div>
@@ -122,29 +124,29 @@
                 <p class="openings-left">{{ qg_board|safe }}</p>
                 <div class="text-right-container">
                     <p class="text-left"><b>Move Order:</b></p>
-                        <small class="text-left">d4 d5 c4</small>
-                <div style="margin-top: 60px;"></div>
+                    <small class="text-left">d4 d5 c4</small>
+                    <div style="margin-top: 60px;"></div>
                     <p class="text-left"><b>Pros vs. Cons:</b></p>
-                        <dl class="text-left">  
-                            <dt>Pros</dt>
-                                <dd>- Fights to control the center</dd>
-                                <dd>- It puts immediate pressure on Black</dd>
-                                <dd>- Gains space</dd>
-                            <dt>Cons</dt>
-                                <dd>- White may have to spend time getting the pawn back</dd>
-                                <dd>- Less attacking chances against the black king</dd>
-                                <dd>- Black may aim to counterattack d4</dd>
-                        </dl>
-                <div style="margin-top: 60px;"></div>
+                    <dl class="text-left">
+                        <dt>Pros</dt>
+                        <dd>- Fights to control the center</dd>
+                        <dd>- It puts immediate pressure on Black</dd>
+                        <dd>- Gains space</dd>
+                        <dt>Cons</dt>
+                        <dd>- White may have to spend time getting the pawn back</dd>
+                        <dd>- Less attacking chances against the black king</dd>
+                        <dd>- Black may aim to counterattack d4</dd>
+                    </dl>
+                    <div style="margin-top: 60px;"></div>
                     <p class="text-left"><b>Chess Masters Who Play This Opening:</b></p>
-                        <small class="text-left">Garry Kasparov, Bobby Fischer, Anatoly Karpov, Magnus Carlsen</small>
+                    <small class="text-left">Garry Kasparov, Bobby Fischer, Anatoly Karpov, Magnus Carlsen</small>
                 </div>
             </div>
         </div>
 
     </body>
 
-    <!-- we created a helper function called openOpening in this JS file that allowed us to create a sidebar menu to change between openings -->
+<!-- we created a helper function called openOpening in this JS file that allowed us to create a sidebar menu to change between openings -->
     <script src="/static/js/openings.js"></script>
 
 

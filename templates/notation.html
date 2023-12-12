@@ -6,8 +6,9 @@
 
 {% block main %}
     <h1>Notation</h1>
+
     <body>
-        By Owen and Daniel 
+        By Owen and Daniel
         <p>In chess, every square has a name. Starting from the left side of the board, in white's perspective, we denote every column starting from a to h, and starting from the bottom we number every row from 1 to 8. We denote the white pieces with capital leter, such as P por pawn, and black pieces with lower letters, such as p for pawn.</p>
         <p>In general, chess follows the following notation:</p>
         <div class="center-container">
@@ -51,25 +52,25 @@
                 </table>
             </div>
 
-        <div class="chessboard">
-            {% for square in squares %}
-                <div class="{{ square.color }}">
-                    {{ square.piece }}{{ square.name }}
-                </div>
-            {% endfor %}
-        </div>
+            <div class="chessboard">
+                {% for square in squares %}
+                    <div class="{{ square.color }}">
+                        {{ square.piece }}{{ square.name }}
+                    </div>
+                {% endfor %}
+            </div>
 
-        <p>
-            Thus, to move a piece, you can simply specify the piece you want to move and the square you want to move it to. For instance, if a game just started and I had the White pieces, I can tell my knight in g1 (Ng1) to move to square f3 by writing Nf1f3. For pawns, however, it is enough to simply state the square to move them to, so you can state e2e3 instead of Pe2e3 for example.
-        </p>
+            <p>
+                Thus, to move a piece, you can simply specify the piece you want to move and the square you want to move it to. For instance, if a game just started and I had the White pieces, I can tell my knight in g1 (Ng1) to move to square f3 by writing Nf1f3. For pawns, however, it is enough to simply state the square to move them to, so you can state e2e3 instead of Pe2e3 for example.
+            </p>
 
-        <p>
-            To summarize, the full notation of the movement of a chess piece in a board is denoted by the symbol of the piece followed by the initial position of the piece and then the final position of the piece. This avoids confusion since there are many identical pieces scattered across the board, so the notation helps identify the msot important information about a piece.
-        </p>
-        
-        <div>
-            <h3><a href="/answer">Try It Yourself!</a></h3>
-        </div>
+            <p>
+                To summarize, the full notation of the movement of a chess piece in a board is denoted by the symbol of the piece followed by the initial position of the piece and then the final position of the piece. This avoids confusion since there are many identical pieces scattered across the board, so the notation helps identify the msot important information about a piece.
+            </p>
 
-    </body>
+            <div>
+                <h3><a href="/answer">Try It Yourself!</a></h3>
+            </div>
+
+        </body>
 {% endblock %}
