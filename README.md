@@ -1,4 +1,4 @@
-# EnPeassant, by Owen Xu Li and Daniel Zhang
+# EnPassant, by Owen Xu Li and Daniel Zhang
 
 Welcome to our CS50 final project! 
 
